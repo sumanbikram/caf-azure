@@ -12,3 +12,8 @@ Please familiarise yourself with our [Code of Conduct][Code-of-Conduct] and the 
 - [Feature Requests](./Contributing%3A-Feature-Requests)
 - [Contributing to Code](./Contributing%3A-Contributing-to-Code)
 - [Contributing to Documentation](./Contributing%3A-Contributing-to-Documentation)
+
+<!--Reference links in article-->
+
+[Code-of-Conduct]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/blob/main/CODE_OF_CONDUCT.md "Our Code-of-Conduct"
+[License]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/blob/main/LICENSE "Our license"
