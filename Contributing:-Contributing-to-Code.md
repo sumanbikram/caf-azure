@@ -1,10 +1,8 @@
-# Become a contributor
+# Contributing to Code
 
-## Before you get started
+Please ensure you have read our [Contributing](./Contributing) page before going any further.
 
-Please familiarise yourself with our [Code of Conduct][Code-of-Conduct] and the [MIT License][License] associated with this repository to ensure all code contributions are submitted in accordance with these terms.
-
-## Contribution Checklist
+## Checklist
 
 - Fixes a bug or feature reported and accepted in our [Issues][Issues] log
 - New features should be relevant to, and improve upon, existing core functionality
@@ -18,8 +16,6 @@ Please familiarise yourself with our [Code of Conduct][Code-of-Conduct] and the 
 
 <!--Reference links in article-->
 
-[Code-of-Conduct]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/blob/main/CODE_OF_CONDUCT.md "Our Code-of-Conduct"
-[License]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/blob/main/LICENSE "Our license"
 [Issues]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/issues "Our issues log"
 [Unit-Tests]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/blob/main/tests/pipelines/tests-unit.yml "Unit tests YAML"
 [E2E-Tests]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/blob/main/tests/pipelines/tests-e2e.yml "E2E tests YAML"
