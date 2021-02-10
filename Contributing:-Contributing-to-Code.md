@@ -1,5 +1,3 @@
-# Contributing to Code
-
 Please ensure you have read our [Contributing](./Contributing) page before going any further.
 
 ## Checklist
