@@ -1,2 +1,4 @@
-- [Raise and Issue](./Contribution%3A-Raise-an-Issue)
-- [Submit Code](./Contribution%3A-Submit-Code)
+- [Raising an Issue](./Contributing%3A-Raising-an-Issue)
+- [Feature Requests](./Contributing%3A-Feature-Requests)
+- [Contributing to Code](./Contributing%3A-Contributing-to-Code)
+- [Contributing to Documentation](./Contributing%3A-Contributing-to-Documentation)
