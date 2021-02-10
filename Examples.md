@@ -1,3 +1,3 @@
-- [Default](./Examples%3A-Default)
-- [Deploy Demo](./Examples%3A-Deploy-Demo)
-- [Custom Landing Zones](./Examples%3A-Custom-Landing-Zones)
+- [Default](./Example%3A-Default)
+- [Deploy Demo](./Example%3A-Deploy-Demo)
+- [Custom Landing Zones](./Example%3A-Custom-Landing-Zones)
