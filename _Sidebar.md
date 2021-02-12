@@ -5,6 +5,7 @@
 - [Home](./Home)
 - [User Guide](./User-Guide)
   - [Getting Started](./User-Guide%3A-Getting-Started)
+  - [Module Variables](./User-Guide:-Module-Variables)
 - [Examples](./Examples)
   - [Default](./Example%3A-Default)
   - [Deploy Demo](./Example%3A-Deploy-Demo)
