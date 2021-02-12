@@ -7,7 +7,7 @@
   - [Getting Started](./User-Guide%3A-Getting-Started)
   - [Module Variables](./User-Guide:-Module-Variables)
 - [Examples](./Examples)
-  - [Default](./Example%3A-Simple)
+  - [Simple](./Example%3A-Simple)
   - [Deploy Demo](./Example%3A-Deploy-Demo)
   - [Custom Landing Zones](./Example%3A-Custom-Landing-Zones)
 - [Frequently Asked Questions](./Frequently-Asked-Questions)
