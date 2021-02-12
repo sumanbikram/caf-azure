@@ -4,6 +4,7 @@
 
 - [Home](./Home)
 - [User Guide](./User-Guide)
+  - [Getting Started](./User-Guide%3A-Getting-Started)
 - [Examples](./Examples)
   - [Default](./Example%3A-Default)
   - [Deploy Demo](./Example%3A-Deploy-Demo)
