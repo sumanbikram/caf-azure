@@ -14,4 +14,4 @@ To get started with this module, please take note of the following usage notes:
 
 ## Next steps
 
-Learn how to use the [Module Variables](User-Guide$3A-Module-Variables) to customise the module configuration.
+Learn how to use the [Module Variables](User-Guide%3A-Module-Variables) to customise the module configuration.
