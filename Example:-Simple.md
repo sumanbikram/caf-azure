@@ -1,4 +1,4 @@
-_Coming soon_
+This page describes how to deploy enterprise-scale with the minimal required syntax.
 
 ```hcl
 provider "azurerm" {
