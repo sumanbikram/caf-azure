@@ -26,7 +26,7 @@ The following resource types are deployed and managed by this module:
 
 ## Next Steps
 
-Check out the [User Guide](./User-Guide), or go straight to our [Examples](./Examples)
+Check out the [User Guide](./User-Guide), or go straight to our [Examples](./Examples).
 
  [//]: # (*****************************)
  [//]: # (INSERT IMAGE REFERENCES BELOW)
