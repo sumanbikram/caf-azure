@@ -6,6 +6,7 @@
 - [User Guide](./User-Guide)
   - [Getting Started](./%5BUser-Guide%5D-Getting-Started)
   - [Module Variables](./%5BUser-Guide%5D-Module-Variables)
+  - [Archetype Definitions](./%5BUser-Guide%5D-Archetype-Definitions)
 - [Examples](./Examples)
   - [Simple](./%5BExamples%5D-Simple)
   - [Deploy Demo Landing Zone Archetypes](./%5BExamples%5D-Deploy-Demo-Landing-Zone-Archetypes)
