@@ -32,7 +32,7 @@ Check out the [User Guide](./User-Guide), or go straight to our [Examples](./Exa
  [//]: # (INSERT IMAGE REFERENCES BELOW)
  [//]: # (*****************************)
 
-[ESLZ-Architecture-Diagram]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/raw/main/media/terraform-caf-enterprise-scale-overview.png "Cloud Adoption Framework Enterprise-scale Landing Zone architecture diagram."
+[ESLZ-Architecture-Diagram]: media/terraform-caf-enterprise-scale-overview.png "Cloud Adoption Framework Enterprise-scale Landing Zone architecture diagram."
 
  [//]: # (************************)
  [//]: # (INSERT LINK LABELS BELOW)

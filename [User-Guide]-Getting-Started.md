@@ -16,7 +16,7 @@ Before getting started with this module, please take note of the following consi
 
 ## Provisioning Instructions
 
-Copy and paste the following 'module' block into your Terraform configuration, insert the required and optional [variables](User-Guide%3A-Module-Variables) needed for your configuration, and run `terraform init`:
+Copy and paste the following 'module' block into your Terraform configuration, insert the required and optional [variables](%5BUser-Guide%5D-Module-Variables) needed for your configuration, and run `terraform init`:
 
 ```hcl
 module "caf-enterprise-scale" {
@@ -30,4 +30,4 @@ For more detailed instructions, follow the [next steps](#Next-steps) listed belo
 
 ## Next steps
 
-Learn how to use the [Module Variables](User-Guide%3A-Module-Variables) to customise the module configuration.
+Learn how to use the [Module Variables](%5BUser-Guide%5D-Module-Variables) to customise the module configuration.

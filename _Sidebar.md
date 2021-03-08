@@ -1,15 +1,15 @@
-![caf-enterprise-scale](https://registry.terraform.io/images/providers/azure.svg?3)
+![caf-enterprise-scale](media/azure.svg)
 
 ## Terraform Module for Cloud Adoption Framework Enterprise-scale
 
 - [Home](./Home)
 - [User Guide](./User-Guide)
-  - [Getting Started](./User-Guide%3A-Getting-Started)
-  - [Module Variables](./User-Guide:-Module-Variables)
+  - [Getting Started](./%5BUser-Guide%5D-Getting-Started)
+  - [Module Variables](./%5BUser-Guide%5D-Module-Variables)
 - [Examples](./Examples)
-  - [Simple](./Example%3A-Simple)
-  - [Deploy Demo](./Example%3A-Deploy-Demo)
-  - [Custom Landing Zones](./Example%3A-Custom-Landing-Zones)
+  - [Simple](./%5BExamples%5D-Simple)
+  - [Deploy Demo Landing Zone Archetypes](./%5BExamples%5D-Deploy-Demo-Landing-Zone-Archetypes)
+  - [Deploy Custom Landing Zone Archetypes](./%5BExamples%5D-Deploy-Custom-Landing-Zone-Archetypes)
 - [Frequently Asked Questions](./Frequently-Asked-Questions)
 - [Troubleshooting](./Troubleshooting)
 - [Contributing](./Contributing)
