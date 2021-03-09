@@ -31,139 +31,156 @@ The following changes have been made within the module which may cause issues wh
     - es_landing_zones
     - es_management
 
-| Resource Type | Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
-| :--- | :--- | :--- | :--- |
-| azurerm_policy_assignment | ES-Allowed-Locations | Allow-Resource-Locations | |
-| azurerm_policy_assignment | ES-Allowed-RSG-Locations | Allow-RSG-Locations | |
-| azurerm_policy_assignment | ES-Deny-AppGW-No-WAF | Deny-AppGW-Without-WAF | |
-| azurerm_policy_assignment | | Deny-http-Ingress-AKS" | (new) |
-| azurerm_policy_assignment | ES-Deny-VMIPForwarding | Deny-IP-Forwarding | |
-| azurerm_policy_assignment | | Deny-Priv-Containers-AKS | (new) |
-| azurerm_policy_assignment | | Deny-Priv-Escalation-AKS | (new) |
-| azurerm_policy_assignment | ES-Deny-RDPFromInternet | Deny-RDP-From-Internet | |
-| azurerm_policy_assignment | ES-Deny-ResourceTypes | Deny-Resource-Types | |
-| azurerm_policy_assignment | | Deny-Storage-http | (new) |
-| azurerm_policy_assignment | ES-Deny-SubnetWithoutNsg | Deny-Subnet-Without-Nsg | |
-| azurerm_policy_assignment | | Deploy-AKS-Policy | (new) |
-| azurerm_policy_assignment | ES-Deploy-ASC-Standard | Deploy-ASC-Defender | |
-| azurerm_policy_assignment | ES-Deploy-ASC-Monitoring | Deploy-ASC-Monitoring | |
-| azurerm_policy_assignment | | Deploy-AzActivity-Log | (new) |
-| azurerm_policy_assignment | | Deploy-Log-Analytics | (new) |
-| azurerm_policy_assignment | | Deploy-LX-Arc-Monitoring | (new) |
-| azurerm_policy_assignment | | Deploy-Resource-Diag | (new) |
-| azurerm_policy_assignment | | Deploy-SQL-DB-Auditing | (new) |
-| azurerm_policy_assignment | | Deploy-SQL-Security | (new) |
-| azurerm_policy_assignment | | Deploy-VM-Backup | (new) |
-| azurerm_policy_assignment | | Deploy-VM-Monitoring | (new) |
-| azurerm_policy_assignment | | Deploy-VMSS-Monitoring | (new) |
-| azurerm_policy_assignment | | Deploy-WS-Arc-Monitoring | (new) |
-| azurerm_policy_definition | ES-Append-KV-SoftDelete | Append-KV-SoftDelete | |
-| azurerm_policy_definition | ES-Deny-AA-child-resources | Deny-AA-child-resources | |
-| azurerm_policy_definition | ES-Deny-AppGW-Without-WAF | Deny-AppGW-Without-WAF | |
-| azurerm_policy_definition | ES-Deny-ERPeering | | (moved to built-in) |
-| azurerm_policy_definition | ES-Deny-Private-DNS-Zones | Deny-Private-DNS-Zones | |
-| azurerm_policy_definition | ES-Deny-PublicEndpoint-Aks | Deny-PublicEndpoint-Aks | |
-| azurerm_policy_definition | ES-Deny-PublicEndpoint-CosmosDB | Deny-PublicEndpoint-CosmosDB | |
-| azurerm_policy_definition | ES-Deny-PublicEndpoint-KeyVault | Deny-PublicEndpoint-KeyVault | |
-| azurerm_policy_definition | ES-Deny-PublicEndpoint-MariaDB | Deny-PublicEndpoint-MariaDB | |
-| azurerm_policy_definition | ES-Deny-PublicEndpoint-MySQL | Deny-PublicEndpoint-MySQL | |
-| azurerm_policy_definition | ES-Deny-PublicEndpoint-PostgreSql | Deny-PublicEndpoint-PostgreSql | |
-| azurerm_policy_definition | ES-Deny-PublicEndpoint-Sql | Deny-PublicEndpoint-Sql | |
-| azurerm_policy_definition | ES-Deny-PublicEndpoint-Storage | Deny-PublicEndpoint-Storage | |
-| azurerm_policy_definition | ES-Deny-PublicIP | Deny-PublicIP | |
-| azurerm_policy_definition | | Deny-RDP-From-Internet | (new) |
-| azurerm_policy_definition | ES-Deny-Subnets-Without-NSG | Deny-Subnet-Without-Nsg | |
-| azurerm_policy_definition | ES-Deny-Subnets-Without-UDR | Deny-Subnet-Without-Udr | |
-| azurerm_policy_definition | | Deny-VNET-Peer-Cross-Sub | (new) |
-| azurerm_policy_definition | | Deny-VNet-Peering | (new) |
-| azurerm_policy_definition | ES-Deploy-ASC-ContinuousExportToWorkspace | | (moved to built-in) |
-| azurerm_policy_definition | ES-Deploy-ASC-Standard | Deploy-ASC-Standard | |
-| azurerm_policy_definition | | Deploy-Budget | (new) |
-| azurerm_policy_definition | ES-Deploy-AzureBackup-on-VMs | | (moved to built-in) |
-| azurerm_policy_definition | ES-Deploy-DDoSProtection | Deploy-DDoSProtection | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-AA | Deploy-Diagnostics-AA | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-ACI | Deploy-Diagnostics-ACI | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-ACR | Deploy-Diagnostics-ACR | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-ActivityLog | Deploy-Diagnostics-ActivityLog | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-AKS | Deploy-Diagnostics-AKS | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-AnalysisService | Deploy-Diagnostics-AnalysisService | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-APIMgmt | Deploy-Diagnostics-APIMgmt | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-ApplicationGateway | Deploy-Diagnostics-ApplicationGateway | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-Batch | Deploy-Diagnostics-Batch | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-CDNEndpoints | Deploy-Diagnostics-CDNEndpoints | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-CognitiveServices | Deploy-Diagnostics-CognitiveServices | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-CosmosDB | Deploy-Diagnostics-CosmosDB | |
-| azurerm_policy_definition | | Deploy-Diagnostics-Databricks | (new) |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-DataFactory | Deploy-Diagnostics-DataFactory | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-DataLakeStore | Deploy-Diagnostics-DataLakeStore | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-DLAnalytics | Deploy-Diagnostics-DLAnalytics | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-EventGridSub | Deploy-Diagnostics-EventGridSub | |
-| azurerm_policy_definition | | Deploy-Diagnostics-EventGridSystemTopic | (new) |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-EventGridTopic | Deploy-Diagnostics-EventGridTopic | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-EventHub | Deploy-Diagnostics-EventHub | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-ExpressRoute | Deploy-Diagnostics-ExpressRoute | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-Firewall | Deploy-Diagnostics-Firewall | |
-| azurerm_policy_definition | | Deploy-Diagnostics-FrontDoor | (new) |
-| azurerm_policy_definition | | Deploy-Diagnostics-Function | (new) |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-HDInsight | Deploy-Diagnostics-HDInsight | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-iotHub | Deploy-Diagnostics-iotHub | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-KeyVault | Deploy-Diagnostics-KeyVault | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-LoadBalancer | Deploy-Diagnostics-LoadBalancer | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-LogicAppsISE | Deploy-Diagnostics-LogicAppsISE | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-LogicAppsWF | Deploy-Diagnostics-LogicAppsWF | |
-| azurerm_policy_definition | | Deploy-Diagnostics-MariaDB | (new) |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-MlWorkspace | Deploy-Diagnostics-MlWorkspace | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-MySQL | Deploy-Diagnostics-MySQL | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-NetworkSecurityGroups | Deploy-Diagnostics-NetworkSecurityGroups | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-NIC | Deploy-Diagnostics-NIC | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-PostgreSQL | Deploy-Diagnostics-PostgreSQL | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-PowerBIEmbedded | Deploy-Diagnostics-PowerBIEmbedded | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-PublicIP | Deploy-Diagnostics-PublicIP | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-RecoveryVault | Deploy-Diagnostics-RecoveryVault | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-RedisCache | Deploy-Diagnostics-RedisCache | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-Relay | Deploy-Diagnostics-Relay | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-SearchServices | Deploy-Diagnostics-SearchServices | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-ServiceBus | Deploy-Diagnostics-ServiceBus | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-SignalR | Deploy-Diagnostics-SignalR | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-SQLDBs | Deploy-Diagnostics-SQLDBs | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-SQLElasticPools | Deploy-Diagnostics-SQLElasticPools | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-SQLMI | Deploy-Diagnostics-SQLMI | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-StreamAnalytics | Deploy-Diagnostics-StreamAnalytics | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-TimeSeriesInsights | Deploy-Diagnostics-TimeSeriesInsights | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-TrafficManager | Deploy-Diagnostics-TrafficManager | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-VirtualNetwork | Deploy-Diagnostics-VirtualNetwork | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-VM | Deploy-Diagnostics-VM | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-VMSS | Deploy-Diagnostics-VMSS | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-VNetGW | Deploy-Diagnostics-VNetGW | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-WebServerFarm | Deploy-Diagnostics-WebServerFarm | |
-| azurerm_policy_definition | ES-Deploy-Diagnostics-Website | Deploy-Diagnostics-Website | |
-| azurerm_policy_definition | | Deploy-Diagnostics-WVDAppGroup | (new) |
-| azurerm_policy_definition | | Deploy-Diagnostics-WVDHostPools | (new) |
-| azurerm_policy_definition | | Deploy-Diagnostics-WVDWorkspace | (new) |
-| azurerm_policy_definition | ES-Deploy-DNSZoneGroup-For-Blob-PrivateEndpoint | Deploy-DNSZoneGroup-For-Blob-PrivateEndpoint | |
-| azurerm_policy_definition | ES-Deploy-DNSZoneGroup-For-File-PrivateEndpoint | Deploy-DNSZoneGroup-For-File-PrivateEndpoint | |
-| azurerm_policy_definition | ES-Deploy-DNSZoneGroup-For-KeyVault-PrivateEndpoint | Deploy-DNSZoneGroup-For-KeyVault-PrivateEndpoint | |
-| azurerm_policy_definition | ES-Deploy-DNSZoneGroup-For-Queue-PrivateEndpoint | Deploy-DNSZoneGroup-For-Queue-PrivateEndpoint | |
-| azurerm_policy_definition | ES-Deploy-DNSZoneGroup-For-Sql-PrivateEndpoint | Deploy-DNSZoneGroup-For-Sql-PrivateEndpoint | |
-| azurerm_policy_definition | ES-Deploy-DNSZoneGroup-For-Table-PrivateEndpoint | Deploy-DNSZoneGroup-For-Table-PrivateEndpoint | |
-| azurerm_policy_definition | ES-Deploy-FirewallPolicy | Deploy-FirewallPolicy | |
-| azurerm_policy_definition | ES-Deploy-HUB | Deploy-HUB | |
-| azurerm_policy_definition | ES-Deploy-LA-Config | Deploy-LA-Config | |
-| azurerm_policy_definition | ES-Deploy-LogAnalytics | Deploy-Log-Analytics | |
-| azurerm_policy_definition | ES-Deploy-Nsg-FlowLogs | Deploy-Nsg-FlowLogs-to-LA | |
-| azurerm_policy_definition | ES-Deploy-Sql-AuditingSettings | Deploy-Sql-AuditingSettings | |
-| azurerm_policy_definition | ES-Deploy-Sql-SecurityAlertPolicies | Deploy-Sql-SecurityAlertPolicies | |
-| azurerm_policy_definition | ES-Deploy-Sql-Tde | Deploy-Sql-Tde | |
-| azurerm_policy_definition | ES-Deploy-Sql-VulnerabilityAssessments | Deploy-Sql-vulnerabilityAssessments | |
-| azurerm_policy_definition | ES-Deploy-vHUB | Deploy-vHUB | |
-| azurerm_policy_definition | | Deploy-VNET-HubSpoke | (new) |
-| azurerm_policy_definition | ES-Deploy-vNet | Deploy-vNet | |
-| azurerm_policy_definition | ES-Deploy-vWAN | Deploy-vWAN | |
-| azurerm_policy_definition | ES-Deploy-Windows-DomainJoin | Deploy-Windows-DomainJoin | |
-| azurerm_policy_set_definition | ES-Deny-Public-Endpoints-for-PaaS-Services | Deny-PublicEndpoints | |
-| azurerm_policy_set_definition | ES-Deploy-Diagnostics-LogAnalytics | Deploy-Diag-LogAnalytics | |
-| azurerm_policy_set_definition | ES-Deploy-Sql-Security | Deploy-Sql-Security | |
-| azurerm_role_definition | ES-Network-Subnet-Contributor | Network-Subnet-Contributor | |
+### `azurerm_policy_assignment`
+
+| Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
+| :--- | :--- | :--- |
+| ES-Allowed-Locations | Allow-Resource-Locations | |
+| ES-Allowed-RSG-Locations | Allow-RSG-Locations | |
+| ES-Deny-AppGW-No-WAF | Deny-AppGW-Without-WAF | |
+| | Deny-http-Ingress-AKS" | (new) |
+| ES-Deny-VMIPForwarding | Deny-IP-Forwarding | |
+| | Deny-Priv-Containers-AKS | (new) |
+| | Deny-Priv-Escalation-AKS | (new) |
+| ES-Deny-RDPFromInternet | Deny-RDP-From-Internet | |
+| ES-Deny-ResourceTypes | Deny-Resource-Types | |
+| | Deny-Storage-http | (new) |
+| ES-Deny-SubnetWithoutNsg | Deny-Subnet-Without-Nsg | |
+| | Deploy-AKS-Policy | (new) |
+| ES-Deploy-ASC-Standard | Deploy-ASC-Defender | |
+| ES-Deploy-ASC-Monitoring | Deploy-ASC-Monitoring | |
+| | Deploy-AzActivity-Log | (new) |
+| | Deploy-Log-Analytics | (new) |
+| | Deploy-LX-Arc-Monitoring | (new) |
+| | Deploy-Resource-Diag | (new) |
+| | Deploy-SQL-DB-Auditing | (new) |
+| | Deploy-SQL-Security | (new) |
+| | Deploy-VM-Backup | (new) |
+| | Deploy-VM-Monitoring | (new) |
+| | Deploy-VMSS-Monitoring | (new) |
+| | Deploy-WS-Arc-Monitoring | (new) |
+
+### `azurerm_policy_definition`
+
+| Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
+| :--- | :--- | :--- |
+| ES-Append-KV-SoftDelete | Append-KV-SoftDelete | |
+| ES-Deny-AA-child-resources | Deny-AA-child-resources | |
+| ES-Deny-AppGW-Without-WAF | Deny-AppGW-Without-WAF | |
+| ES-Deny-ERPeering | | (moved to built-in) |
+| ES-Deny-Private-DNS-Zones | Deny-Private-DNS-Zones | |
+| ES-Deny-PublicEndpoint-Aks | Deny-PublicEndpoint-Aks | |
+| ES-Deny-PublicEndpoint-CosmosDB | Deny-PublicEndpoint-CosmosDB | |
+| ES-Deny-PublicEndpoint-KeyVault | Deny-PublicEndpoint-KeyVault | |
+| ES-Deny-PublicEndpoint-MariaDB | Deny-PublicEndpoint-MariaDB | |
+| ES-Deny-PublicEndpoint-MySQL | Deny-PublicEndpoint-MySQL | |
+| ES-Deny-PublicEndpoint-PostgreSql | Deny-PublicEndpoint-PostgreSql | |
+| ES-Deny-PublicEndpoint-Sql | Deny-PublicEndpoint-Sql | |
+| ES-Deny-PublicEndpoint-Storage | Deny-PublicEndpoint-Storage | |
+| ES-Deny-PublicIP | Deny-PublicIP | |
+| | Deny-RDP-From-Internet | (new) |
+| ES-Deny-Subnets-Without-NSG | Deny-Subnet-Without-Nsg | |
+| ES-Deny-Subnets-Without-UDR | Deny-Subnet-Without-Udr | |
+| | Deny-VNET-Peer-Cross-Sub | (new) |
+| | Deny-VNet-Peering | (new) |
+| ES-Deploy-ASC-ContinuousExportToWorkspace | | (moved to built-in) |
+| ES-Deploy-ASC-Standard | Deploy-ASC-Standard | |
+| | Deploy-Budget | (new) |
+| ES-Deploy-AzureBackup-on-VMs | | (moved to built-in) |
+| ES-Deploy-DDoSProtection | Deploy-DDoSProtection | |
+| ES-Deploy-Diagnostics-AA | Deploy-Diagnostics-AA | |
+| ES-Deploy-Diagnostics-ACI | Deploy-Diagnostics-ACI | |
+| ES-Deploy-Diagnostics-ACR | Deploy-Diagnostics-ACR | |
+| ES-Deploy-Diagnostics-ActivityLog | Deploy-Diagnostics-ActivityLog | |
+| ES-Deploy-Diagnostics-AKS | Deploy-Diagnostics-AKS | |
+| ES-Deploy-Diagnostics-AnalysisService | Deploy-Diagnostics-AnalysisService | |
+| ES-Deploy-Diagnostics-APIMgmt | Deploy-Diagnostics-APIMgmt | |
+| ES-Deploy-Diagnostics-ApplicationGateway | Deploy-Diagnostics-ApplicationGateway | |
+| ES-Deploy-Diagnostics-Batch | Deploy-Diagnostics-Batch | |
+| ES-Deploy-Diagnostics-CDNEndpoints | Deploy-Diagnostics-CDNEndpoints | |
+| ES-Deploy-Diagnostics-CognitiveServices | Deploy-Diagnostics-CognitiveServices | |
+| ES-Deploy-Diagnostics-CosmosDB | Deploy-Diagnostics-CosmosDB | |
+| | Deploy-Diagnostics-Databricks | (new) |
+| ES-Deploy-Diagnostics-DataFactory | Deploy-Diagnostics-DataFactory | |
+| ES-Deploy-Diagnostics-DataLakeStore | Deploy-Diagnostics-DataLakeStore | |
+| ES-Deploy-Diagnostics-DLAnalytics | Deploy-Diagnostics-DLAnalytics | |
+| ES-Deploy-Diagnostics-EventGridSub | Deploy-Diagnostics-EventGridSub | |
+| | Deploy-Diagnostics-EventGridSystemTopic | (new) |
+| ES-Deploy-Diagnostics-EventGridTopic | Deploy-Diagnostics-EventGridTopic | |
+| ES-Deploy-Diagnostics-EventHub | Deploy-Diagnostics-EventHub | |
+| ES-Deploy-Diagnostics-ExpressRoute | Deploy-Diagnostics-ExpressRoute | |
+| ES-Deploy-Diagnostics-Firewall | Deploy-Diagnostics-Firewall | |
+| | Deploy-Diagnostics-FrontDoor | (new) |
+| | Deploy-Diagnostics-Function | (new) |
+| ES-Deploy-Diagnostics-HDInsight | Deploy-Diagnostics-HDInsight | |
+| ES-Deploy-Diagnostics-iotHub | Deploy-Diagnostics-iotHub | |
+| ES-Deploy-Diagnostics-KeyVault | Deploy-Diagnostics-KeyVault | |
+| ES-Deploy-Diagnostics-LoadBalancer | Deploy-Diagnostics-LoadBalancer | |
+| ES-Deploy-Diagnostics-LogicAppsISE | Deploy-Diagnostics-LogicAppsISE | |
+| ES-Deploy-Diagnostics-LogicAppsWF | Deploy-Diagnostics-LogicAppsWF | |
+| | Deploy-Diagnostics-MariaDB | (new) |
+| ES-Deploy-Diagnostics-MlWorkspace | Deploy-Diagnostics-MlWorkspace | |
+| ES-Deploy-Diagnostics-MySQL | Deploy-Diagnostics-MySQL | |
+| ES-Deploy-Diagnostics-NetworkSecurityGroups | Deploy-Diagnostics-NetworkSecurityGroups | |
+| ES-Deploy-Diagnostics-NIC | Deploy-Diagnostics-NIC | |
+| ES-Deploy-Diagnostics-PostgreSQL | Deploy-Diagnostics-PostgreSQL | |
+| ES-Deploy-Diagnostics-PowerBIEmbedded | Deploy-Diagnostics-PowerBIEmbedded | |
+| ES-Deploy-Diagnostics-PublicIP | Deploy-Diagnostics-PublicIP | |
+| ES-Deploy-Diagnostics-RecoveryVault | Deploy-Diagnostics-RecoveryVault | |
+| ES-Deploy-Diagnostics-RedisCache | Deploy-Diagnostics-RedisCache | |
+| ES-Deploy-Diagnostics-Relay | Deploy-Diagnostics-Relay | |
+| ES-Deploy-Diagnostics-SearchServices | Deploy-Diagnostics-SearchServices | |
+| ES-Deploy-Diagnostics-ServiceBus | Deploy-Diagnostics-ServiceBus | |
+| ES-Deploy-Diagnostics-SignalR | Deploy-Diagnostics-SignalR | |
+| ES-Deploy-Diagnostics-SQLDBs | Deploy-Diagnostics-SQLDBs | |
+| ES-Deploy-Diagnostics-SQLElasticPools | Deploy-Diagnostics-SQLElasticPools | |
+| ES-Deploy-Diagnostics-SQLMI | Deploy-Diagnostics-SQLMI | |
+| ES-Deploy-Diagnostics-StreamAnalytics | Deploy-Diagnostics-StreamAnalytics | |
+| ES-Deploy-Diagnostics-TimeSeriesInsights | Deploy-Diagnostics-TimeSeriesInsights | |
+| ES-Deploy-Diagnostics-TrafficManager | Deploy-Diagnostics-TrafficManager | |
+| ES-Deploy-Diagnostics-VirtualNetwork | Deploy-Diagnostics-VirtualNetwork | |
+| ES-Deploy-Diagnostics-VM | Deploy-Diagnostics-VM | |
+| ES-Deploy-Diagnostics-VMSS | Deploy-Diagnostics-VMSS | |
+| ES-Deploy-Diagnostics-VNetGW | Deploy-Diagnostics-VNetGW | |
+| ES-Deploy-Diagnostics-WebServerFarm | Deploy-Diagnostics-WebServerFarm | |
+| ES-Deploy-Diagnostics-Website | Deploy-Diagnostics-Website | |
+| | Deploy-Diagnostics-WVDAppGroup | (new) |
+| | Deploy-Diagnostics-WVDHostPools | (new) |
+| | Deploy-Diagnostics-WVDWorkspace | (new) |
+| ES-Deploy-DNSZoneGroup-For-Blob-PrivateEndpoint | Deploy-DNSZoneGroup-For-Blob-PrivateEndpoint | |
+| ES-Deploy-DNSZoneGroup-For-File-PrivateEndpoint | Deploy-DNSZoneGroup-For-File-PrivateEndpoint | |
+| ES-Deploy-DNSZoneGroup-For-KeyVault-PrivateEndpoint | Deploy-DNSZoneGroup-For-KeyVault-PrivateEndpoint | |
+| ES-Deploy-DNSZoneGroup-For-Queue-PrivateEndpoint | Deploy-DNSZoneGroup-For-Queue-PrivateEndpoint | |
+| ES-Deploy-DNSZoneGroup-For-Sql-PrivateEndpoint | Deploy-DNSZoneGroup-For-Sql-PrivateEndpoint | |
+| ES-Deploy-DNSZoneGroup-For-Table-PrivateEndpoint | Deploy-DNSZoneGroup-For-Table-PrivateEndpoint | |
+| ES-Deploy-FirewallPolicy | Deploy-FirewallPolicy | |
+| ES-Deploy-HUB | Deploy-HUB | |
+| ES-Deploy-LA-Config | Deploy-LA-Config | |
+| ES-Deploy-LogAnalytics | Deploy-Log-Analytics | |
+| ES-Deploy-Nsg-FlowLogs | Deploy-Nsg-FlowLogs-to-LA | |
+| ES-Deploy-Sql-AuditingSettings | Deploy-Sql-AuditingSettings | |
+| ES-Deploy-Sql-SecurityAlertPolicies | Deploy-Sql-SecurityAlertPolicies | |
+| ES-Deploy-Sql-Tde | Deploy-Sql-Tde | |
+| ES-Deploy-Sql-VulnerabilityAssessments | Deploy-Sql-vulnerabilityAssessments | |
+| ES-Deploy-vHUB | Deploy-vHUB | |
+| | Deploy-VNET-HubSpoke | (new) |
+| ES-Deploy-vNet | Deploy-vNet | |
+| ES-Deploy-vWAN | Deploy-vWAN | |
+| ES-Deploy-Windows-DomainJoin | Deploy-Windows-DomainJoin | |
+
+### `azurerm_policy_set_definition`
+
+| Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
+| :--- | :--- | :--- |
+| ES-Deny-Public-Endpoints-for-PaaS-Services | Deny-PublicEndpoints | |
+| ES-Deploy-Diagnostics-LogAnalytics | Deploy-Diag-LogAnalytics | |
+| ES-Deploy-Sql-Security | Deploy-Sql-Security | |
+
+### `azurerm_role_definition`
+
+| Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
+| :--- | :--- | :--- |
+| ES-Network-Subnet-Contributor | Network-Subnet-Contributor | |
 
 ## Archetype definitions changes
 
