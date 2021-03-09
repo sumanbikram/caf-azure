@@ -31,7 +31,9 @@ The following changes have been made within the module which may cause issues wh
     - es_landing_zones
     - es_management
 
-### `azurerm_policy_assignment`
+> NOTE: Please note that all references to resource names are Case Sensitive
+
+### Resource type: `azurerm_policy_assignment`
 
 | Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
 | :--- | :--- | :--- |
@@ -60,7 +62,7 @@ The following changes have been made within the module which may cause issues wh
 | | Deploy-VMSS-Monitoring | (new) |
 | | Deploy-WS-Arc-Monitoring | (new) |
 
-### `azurerm_policy_definition`
+### Resource type: `azurerm_policy_definition`
 
 | Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
 | :--- | :--- | :--- |
@@ -168,7 +170,7 @@ The following changes have been made within the module which may cause issues wh
 | ES-Deploy-vWAN | Deploy-vWAN | |
 | ES-Deploy-Windows-DomainJoin | Deploy-Windows-DomainJoin | |
 
-### `azurerm_policy_set_definition`
+### Resource type: `azurerm_policy_set_definition`
 
 | Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
 | :--- | :--- | :--- |
@@ -176,7 +178,7 @@ The following changes have been made within the module which may cause issues wh
 | ES-Deploy-Diagnostics-LogAnalytics | Deploy-Diag-LogAnalytics | |
 | ES-Deploy-Sql-Security | Deploy-Sql-Security | |
 
-### `azurerm_role_definition`
+### Resource type: `azurerm_role_definition`
 
 | Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
 | :--- | :--- | :--- |
