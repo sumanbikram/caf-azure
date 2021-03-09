@@ -15,6 +15,8 @@
   - [template_file_variables][template_file_variables]
   - [create_duration_delay][template_file_variables]
   - [destroy_duration_delay][template_file_variables]
+- [Archetype Definitions][Archetype Definitions]
+- [Upgrade from v0.0.8 to v0.1.0][Upgrade from v0.0.8 to v0.1.0]
 
 
  [//]: # (************************)
@@ -23,6 +25,9 @@
 
 [Getting Started]: ./%5BUser-Guide%5D-Getting-Started "Getting Started"
 [Module Variables]: ./%5BUser-Guide%5D-Module-Variables "Module Variables"
+[Archetype Definitions]: ./%5BUser-Guide%5D-Archetype-Definitions "Archetype Definitions"
+[Upgrade from v0.0.8 to v0.1.0]: ./%5BUser-Guide%5D-Upgrade-from-v0.0.8-to-v0.1.0.md "Upgrade from v0.0.8 to v0.1.0"
+
 [root_parent_id]: ./%5BVariables%5D-root_parent_id "Instructions for how to use the root_parent_id variable."
 [root_id]: ./%5BVariables%5D-root_id "Instructions for how to use the root_id variable."
 [root_name]: ./%5BVariables%5D-root_name "Instructions for how to use the root_name variable."
