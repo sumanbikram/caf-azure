@@ -209,7 +209,7 @@ To bring this in alignment with the Enterprise-scale reference architecture, the
 
 | Policy Assignments (v0.0.8) | Policy Assignments (v0.1.0) |
 | :--- | :--- |
-| ES-Allowed-Locations<br>ES-Allowed-RSG-Locations<br>ES-Deny-AppGW-No-WAF<br>ES-Deny-VMIPForwarding<br>ES-Deny-RDPFromInternet<br>ES-Deny-ResourceTypes<br>ES-Deny-SubnetWithoutNsg<br>ES-Deploy-ASC-Monitoring<br>ES-Deploy-ASC-Standard | Deploy-ASC-Monitoring<br>Deploy-ASC-Defender<br>Deploy-AzActivity-Log<br>Deploy-LX-Arc-Monitoring<br>Deploy-Resource-Diag<br>Deploy-VM-Monitoring<br>Deploy-VMSS-Monitoring<br>Deploy-WS-Arc-Monitoring |
+| ES-Allowed-Locations<br>ES-Allowed-RSG-Locations<br>ES-Deny-AppGW-No-WAF<br>ES-Deny-VMIPForwarding<br>ES-Deny-RDPFromInternet<br>ES-Deny-ResourceTypes<br>ES-Deny-SubnetWithoutNsg<br>ES-Deploy-ASC-Monitoring<br>ES-Deploy-ASC-Standard | Deploy-ASC-Monitoring<br>Deploy-ASC-Defender<br>Deploy-AzActivity-Log<br>Deploy-LX-Arc-Monitoring<br>Deploy-Resource-Diag<br>Deploy-VM-Monitoring<br>Deploy-VMSS-Monitoring<br>Deploy-WS-Arc-Monitoring<br><br> |
 
 If you are using a copy of this archetype in your custom library (as specified using the `library_path` variable), please ensure you update all applicable resource names from the v0.0.8 format to v0.1.0.
 
