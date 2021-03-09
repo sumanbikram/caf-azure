@@ -1,10 +1,18 @@
 ## Overview
 
-This page describes how to deploy Enterprise-scale with a simple configuration based on the defaults.
+This page describes how to deploy Enterprise-scale with a starter configuration based mainly on module defaults.
+
+This is a good starting point when first discovering what resources are created by this module.
 
 > NOTE: Although only `root_parent_id` is required, we recommend setting `root_id` and `root_name` to something more meaningful. Changing `root_id` will result in the entire deployment to be re-provisioned.
 
 ## Example Root Module
+
+To keep things simple, the root module for this example is based on a single file:
+
+- `main.tf`
+
+For production deployments, we recommend splitting your root module into multiple files to make the code easier to maintain when extending your configuration.
 
 **File: `main.tf`**
 

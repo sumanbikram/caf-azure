@@ -16,16 +16,16 @@ In this example, we take a default configuration and make the following changes:
   - Parent Management Group ID: `es-landing-zones`
   - Allowed location list: `["eastus"]`
 
+> NOTE: Although only `root_parent_id` is required, we recommend setting `root_id` and `root_name` to something more meaningful. Changing `root_id` will result in the entire deployment to be re-provisioned.
+
+## Example Root Module
+
 To make the code easier to maintain when extending your configuration, we recommend splitting the root module into multiple files. For the purpose of this example, we use the following:
 
 - `lib/archetype_definition_customer_online.json`
 - `main.tf`
 - `terraform.tf`
 - `variables.tf`
-
-> NOTE: Although only `root_parent_id` is required, we recommend setting `root_id` and `root_name` to something more meaningful. Changing `root_id` will result in the entire deployment to be re-provisioned.
-
-## Example Root Module
 
 **File: `terraform.tf`**
 
