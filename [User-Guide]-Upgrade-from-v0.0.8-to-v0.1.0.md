@@ -32,7 +32,7 @@ The following changes have been made within the module which may cause issues wh
     - es_management
 
 | Resource Type | Changes | | Notes |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | azurerm_policy_assignment | <span style="color:red">-</span> ES-Allowed-Locations | <span style="color:green">+</span> Allow-Resource-Locations | |
 | azurerm_policy_assignment | <span style="color:red">-</span> ES-Allowed-RSG-Locations | <span style="color:green">+</span> Allow-RSG-Locations | |
 | azurerm_policy_assignment | <span style="color:red">-</span> ES-Deny-AppGW-No-WAF | <span style="color:green">+</span> Deny-AppGW-Without-WAF | |
