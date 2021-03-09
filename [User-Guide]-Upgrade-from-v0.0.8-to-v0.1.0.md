@@ -1,8 +1,8 @@
-> The following page has been published in preparation for the next release, 0.1.0, which will introduce a number of changes which will result in the redeployment of many resources managed by this module.
+## Overview
+
+> This page has been published in preparation for the next release, 0.1.0, which will introduce a number of changes which will result in the redeployment of many resources managed by this module.
 >
 > THIS PAGE IS STILL A WORK IN PROGRESS!
-
-## Overview
 
 As part of upgrade from release 0.0.8 to 0.1.0, the [Terraform Module for Cloud Adoption Framework Enterprise-scale][terraform-registry-caf-enterprise-scale] has undergone a significant update to the included `Policy Assignments`, `Policy Definitions` and `Policy Set Definitions`.
 
