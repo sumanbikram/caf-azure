@@ -31,7 +31,18 @@ The following changes have been made within the module which may cause issues wh
     - es_landing_zones
     - es_management
 
-> NOTE: Please note that all references to resource names are Case Sensitive
+> NOTE: All references to resource names are **_Case Sensitive_**. Failure to use the correct case will result in an `Invalid index` error when running `terraform plan`, such as the following example:
+
+```shell
+Error: Invalid index
+
+  on ../../modules/archetypes/locals.policy_definitions.tf line 82, in locals:
+  82:       template    = local.archetype_policy_definitions_map[policy]
+    |----------------
+    | local.archetype_policy_definitions_map is object with 100 attributes
+
+The given key does not identify an element in this collection value.
+```
 
 ### Resource type: `azurerm_policy_assignment`
 
