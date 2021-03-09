@@ -14,7 +14,7 @@ Anyone using this module should be aware of the following when planning to upgra
 
 1. Due to the extent of updates, all policies and roles provided as part of this module will be redeployed. Please carefully review the output of `terraform plan` to ensure there are no issues with any custom configuration within your root module.
 1. If you are using custom templates, you will need to verify references to policies and roles defined within this module.
-1. The following template types will need checking for references to policies and roles as listed in the [Changes](#changes) section below:
+1. The following template types will need checking for references to policies and roles as listed in the [resource changes](#resource-changes) section below:
    1. Archetype Definitions
    1. Policy Assignments
    1. Policy Set Definitions
@@ -48,8 +48,8 @@ The given key does not identify an element in this collection value.
 
 | Policy Assignment Name (v0.0.8) | Policy Assignment Name (v0.1.0) | Notes |
 | :--- | :--- | :--- |
-| ES-Allowed-Locations | Allow-Resource-Locations | |
-| ES-Allowed-RSG-Locations | Allow-RSG-Locations | |
+| ES-Allowed-Locations | Deny-Resource-Locations | |
+| ES-Allowed-RSG-Locations | Deny-RSG-Locations | |
 | ES-Deny-AppGW-No-WAF | Deny-AppGW-Without-WAF | |
 | | Deny-http-Ingress-AKS" | (new) |
 | ES-Deny-VMIPForwarding | Deny-IP-Forwarding | |
@@ -213,7 +213,7 @@ To bring this in alignment with the Enterprise-scale reference architecture, the
 
 If you are using a copy of this archetype in your custom library (as specified using the `library_path` variable), please ensure you update all applicable resource names from the v0.0.8 format to v0.1.0.
 
-> The policy assignments for `ES-Allowed-Locations` and `ES-Allowed-RSG-Locations` do not form part of the official Enterprise-scale reference architecture foundation policy assignments so are no longer assigned by default, but are still available within the module using the new names `Allow-Resource-Locations` and `Allow-RSG-Locations`.
+> The policy assignments for `ES-Allowed-Locations` and `ES-Allowed-RSG-Locations` do not form part of the official Enterprise-scale reference architecture foundation policy assignments so are no longer assigned by default, but are still available within the module using the new names `Deny-Resource-Locations` and `Deny-RSG-Locations`.
 
 ### es_landing_zones
 
@@ -245,7 +245,7 @@ To bring this in alignment with the Enterprise-scale reference architecture, the
 
 Unfortunately this question is hard to answer, but our intent is to keep future updates to policies in smaller increments so the impact will be smaller.
 
-To help with this, we have automated the process used to keep the policies in sync, allowing us to quickly and easily manage future updates.
+To help with this, we have automated the process used to keep the policies in sync, allowing us to more quickly and easily manage future updates in smaller and more frequent increments. None should also be as dramatic as this update.
 
 ## Next steps
 

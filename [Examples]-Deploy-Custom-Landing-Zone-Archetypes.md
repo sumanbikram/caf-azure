@@ -4,7 +4,7 @@ This page describes how to deploy Enterprise-scale with a custom configuration, 
 
 In this example, we take a default configuration and make the following changes:
 
-- Create a new custom archetype definition named `customer_online` which will create two Policy Assignments, `Allow-Resource-Locations` and `Allow-RSG-Locations` at the associated scope with a set of pre-configured default parameter values.
+- Create a new custom archetype definition named `customer_online` which will create two Policy Assignments, `Deny-Resource-Locations` and `Deny-RSG-Locations` at the associated scope with a set of pre-configured default parameter values.
 - Add a new Management Group for standard workloads using the `customer_online` archetype definition:
   - Management Group ID: `es-online-example-1`
   - Management Group Name: `ES Online Example 1`
@@ -115,12 +115,12 @@ module "enterprise_scale" {
       archetype_config = {
         archetype_id   = "customer_online"
         parameters     = {
-          Allow-Resource-Locations = {
+          Deny-Resource-Locations = {
             listOfAllowedLocations = jsonencode([
               "eastus",
             ])
           }
-          Allow-RSG-Locations = {
+          Deny-RSG-Locations = {
             listOfAllowedLocations = jsonencode([
               "eastus",
             ])
@@ -138,7 +138,7 @@ module "enterprise_scale" {
 
 The `lib/archetype_definition_customer_online.json` file contains a custom "archetype definition". This is a custom JSON format used specifically by the Terraform Module for Cloud Adoption Framework Enterprise-scale.
 
-In this example, we are using this archetype definition to create an archetype called `customer_online`. This archetype definition includes the creation of Policy Assignments for `Allow-Resource-Locations` and `Allow-RSG-Locations`, with default values pre-defined in the archetype definition template.
+In this example, we are using this archetype definition to create an archetype called `customer_online`. This archetype definition includes the creation of Policy Assignments for `Deny-Resource-Locations` and `Deny-RSG-Locations`, with default values pre-defined in the archetype definition template.
 
 For more details about working with archetype definitions, please refer to the [archetype definition user guide](./%5BUser-Guide%5D-Archetype-Definitions).
 
@@ -146,15 +146,15 @@ For more details about working with archetype definitions, please refer to the [
 {
     "customer_online": {
         "policy_assignments": [
-            "Allow-Resource-Locations",
-            "Allow-RSG-Locations"
+            "Deny-Resource-Locations",
+            "Deny-RSG-Locations"
         ],
         "policy_definitions": [],
         "policy_set_definitions": [],
         "role_definitions": [],
         "archetype_config": {
             "parameters": {
-                "Allow-Resource-Locations": {
+                "Deny-Resource-Locations": {
                     "listOfAllowedLocations": [
                         "eastus",
                         "eastus2",
@@ -163,7 +163,7 @@ For more details about working with archetype definitions, please refer to the [
                         "southcentralus"
                     ]
                 },
-                "Allow-RSG-Locations": {
+                "Deny-RSG-Locations": {
                     "listOfAllowedLocations": [
                         "eastus",
                         "eastus2",
