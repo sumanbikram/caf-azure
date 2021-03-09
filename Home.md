@@ -17,12 +17,13 @@ The following resource types are deployed and managed by this module:
 
 |     | Azure Resource | Terraform Resource |
 | --- | -------------- | ------------------ |
-| Management Groups      | [`Microsoft.Management/managementGroups`][arm_management_group]             | [`azurerm_management_group`][azurerm_management_group]           |
-| Policy Assignments     | [`Microsoft.Authorization/policyAssignments`][arm_policy_assignment]        | [`azurerm_policy_assignment`][azurerm_policy_assignment]         |
-| Policy Definitions     | [`Microsoft.Authorization/policyDefinitions`][arm_policy_definition]        | [`azurerm_policy_definition`][azurerm_policy_definition]         |
+| Management Groups | [`Microsoft.Management/managementGroups`][arm_management_group] | [`azurerm_management_group`][azurerm_management_group] |
+| Management Group Subscriptions | [`Microsoft.Management/managementGroups/subscriptions`][arm_management_group_subscriptions] | [`azurerm_management_group`][azurerm_management_group] |
+| Policy Assignments | [`Microsoft.Authorization/policyAssignments`][arm_policy_assignment] | [`azurerm_policy_assignment`][azurerm_policy_assignment] |
+| Policy Definitions | [`Microsoft.Authorization/policyDefinitions`][arm_policy_definition] | [`azurerm_policy_definition`][azurerm_policy_definition] |
 | Policy Set Definitions | [`Microsoft.Authorization/policySetDefinitions`][arm_policy_set_definition] | [`azurerm_policy_set_definition`][azurerm_policy_set_definition] |
-| Role Assignments       | [`Microsoft.Authorization/roleAssignments`][arm_role_assignment]            | [`azurerm_role_assignment`][azurerm_role_assignment]             |
-| Role Definitions       | [`Microsoft.Authorization/roleDefinitions`][arm_role_definition]            | [`azurerm_role_definition`][azurerm_role_definition]             |
+| Role Assignments | [`Microsoft.Authorization/roleAssignments`][arm_role_assignment] | [`azurerm_role_assignment`][azurerm_role_assignment] |
+| Role Definitions | [`Microsoft.Authorization/roleDefinitions`][arm_role_definition] | [`azurerm_role_definition`][azurerm_role_definition] |
 
 ## Next Steps
 
@@ -43,12 +44,13 @@ Check out the [User Guide](./User-Guide), or go straight to our [Examples](./Exa
 [management-group-and-subscription-organization]: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization "Cloud Adoption Framework: Management group and subscription organization"
 [identity-and-access-management]: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management "Cloud Adoption Framework: Identity and access management"
 
-[arm_management_group]:      https://docs.microsoft.com/en-us/azure/templates/microsoft.management/managementgroups
-[arm_policy_assignment]:     https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/policyassignments
-[arm_policy_definition]:     https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/policydefinitions
-[arm_policy_set_definition]: https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/policysetdefinitions
-[arm_role_assignment]:       https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/roleassignments
-[arm_role_definition]:       https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/roledefinitions
+[arm_management_group]:               https://docs.microsoft.com/en-us/azure/templates/microsoft.management/managementgroups
+[arm_management_group_subscriptions]: https://docs.microsoft.com/en-us/azure/templates/microsoft.management/managementgroups/subscriptions
+[arm_policy_assignment]:              https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/policyassignments
+[arm_policy_definition]:              https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/policydefinitions
+[arm_policy_set_definition]:          https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/policysetdefinitions
+[arm_role_assignment]:                https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/roleassignments
+[arm_role_definition]:                https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/roledefinitions
 
 [azurerm_management_group]:      https://www.terraform.io/docs/providers/azurerm/r/management_group.html
 [azurerm_policy_assignment]:     https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html
