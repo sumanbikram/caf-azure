@@ -14,7 +14,7 @@ Anyone using this module should be aware of the following when planning to upgra
 
 1. Due to the extent of updates, all policies and roles provided as part of this module will be redeployed. Please carefully review the output of `terraform plan` to ensure there are no issues with any custom configuration within your root module.
 1. If you are using custom templates, you will need to verify references to policies and roles defined within this module.
-1. The following template types will need checking for references to policies and roles as listed in the [Changes](#Changes) section below:
+1. The following template types will need checking for references to policies and roles as listed in the [Changes](#changes) section below:
    1. Archetype Definitions
    1. Policy Assignments
    1. Policy Set Definitions
@@ -26,7 +26,7 @@ The following changes have been made within the module which may cause issues wh
 
 - All policy and role names have been updated to reflect the names used within the reference [Azure/Enterprise-Scale][Azure/Enterprise-Scale] repository. This means the `ES-` prefix has been removed, and some names have been changed (see lists below).
 - All policies and roles are referenced by the `name` field. Previously we referenced the `properties.displayName` field. Please ensure any custom policy and role templates are updated to ensure the correct name is present in the `name` field. This change allows you to set a more user-friendly display name for these resources.
-- The following archetype definitions have been updated (details in the [Archetype Definitions](#Archetype-Definitions) section below):
+- The following archetype definitions have been updated (details in the [Archetype Definitions](#archetype-definitions-changes) section below):
     - es_root
     - es_landing_zones
     - es_management
