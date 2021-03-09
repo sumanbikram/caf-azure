@@ -46,7 +46,7 @@ The given key does not identify an element in this collection value.
 
 ### Resource type: `azurerm_policy_assignment`
 
-| Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
+| Policy Assignment Name (v0.0.8) | Policy Assignment Name (v0.1.0) | Notes |
 | :--- | :--- | :--- |
 | ES-Allowed-Locations | Allow-Resource-Locations | |
 | ES-Allowed-RSG-Locations | Allow-RSG-Locations | |
@@ -75,7 +75,7 @@ The given key does not identify an element in this collection value.
 
 ### Resource type: `azurerm_policy_definition`
 
-| Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
+| Policy Definition Name (v0.0.8) | Policy Definition  Name (v0.1.0) | Notes |
 | :--- | :--- | :--- |
 | ES-Append-KV-SoftDelete | Append-KV-SoftDelete | |
 | ES-Deny-AA-child-resources | Deny-AA-child-resources | |
@@ -183,7 +183,7 @@ The given key does not identify an element in this collection value.
 
 ### Resource type: `azurerm_policy_set_definition`
 
-| Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
+| Policy Set Definition  Name (v0.0.8) | Policy Set Definition  Name (v0.1.0) | Notes |
 | :--- | :--- | :--- |
 | ES-Deny-Public-Endpoints-for-PaaS-Services | Deny-PublicEndpoints | |
 | ES-Deploy-Diagnostics-LogAnalytics | Deploy-Diag-LogAnalytics | |
@@ -191,7 +191,7 @@ The given key does not identify an element in this collection value.
 
 ### Resource type: `azurerm_role_definition`
 
-| Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
+| Role Definition  Name (v0.0.8) | Role Definition  Name (v0.1.0) | Notes |
 | :--- | :--- | :--- |
 | ES-Network-Subnet-Contributor | Network-Subnet-Contributor | |
 
@@ -200,13 +200,46 @@ The given key does not identify an element in this collection value.
 To reflect the updated policies, and ensure policies are assigned according to the foundation implementation of Enterprise-scale, the following updates were made to the archetype definitions:
 
 ### es_root
-_details coming soon_
+
+In a default configuration, the `es_root` archetype definition is applied to the `${var.root_id}` Management Group. This is the default scope for all custom Policy Definitions, Policy Set Definitions (Initiatives), and Role Definitions defined by Enterprise-scale but is also where user-defined definitions should be created. This ensures all definitions are available for assignment anywhere within the Enterprise-scale Management Group hierarchy.
+
+As such, this archetype definition contains references for ALL of the Policy Definitions, Policy Set Definitions (Initiatives), and Role Definitions listed in the previous sections.
+
+To bring this in alignment with the Enterprise-scale reference architecture, the following changes will be made to the Policy Assignments created by this archetype from v0.1.0 onwards:
+
+| Policy Assignments (v0.0.8) | Policy Assignments (v0.1.0) |
+| :--- | :--- |
+| ES-Allowed-Locations</br>ES-Allowed-RSG-Locations</br>ES-Deny-AppGW-No-WAF</br>ES-Deny-VMIPForwarding</br>ES-Deny-RDPFromInternet</br>ES-Deny-ResourceTypes</br>ES-Deny-SubnetWithoutNsg</br>ES-Deploy-ASC-Monitoring</br>ES-Deploy-ASC-Standard | Deploy-ASC-Monitoring</br>Deploy-ASC-Defender</br>Deploy-AzActivity-Log</br>Deploy-LX-Arc-Monitoring</br>Deploy-Resource-Diag</br>Deploy-VM-Monitoring</br>Deploy-VMSS-Monitoring</br>Deploy-WS-Arc-Monitoring |
+
+If you are using a copy of this archetype in your custom library (as specified using the `library_path` variable), please ensure you update all applicable resource names from the v0.0.8 format to v0.1.0.
+
+> The policy assignments for `ES-Allowed-Locations` and `ES-Allowed-RSG-Locations` do not form part of the official Enterprise-scale reference architecture foundation policy assignments so are no longer assigned by default, but are still available within the module using the new names `Allow-Resource-Locations` and `Allow-RSG-Locations`.
 
 ### es_landing_zones
-_details coming soon_
+
+In a default configuration, the `es_landing_zones` archetype definition is applied to the `${var.root_id}-landing-zones` Management Group. Previously this archetype contained no entries (equivalent to the `default_empty` archetype.)
+
+To bring this in alignment with the Enterprise-scale reference architecture, the following Policy Assignments will now be created by this archetype from v0.1.0 onwards:
+
+- Deny-IP-Forwarding
+- Deny-RDP-From-Internet
+- Deny-Storage-http
+- Deny-Subnet-Without-Nsg
+- Deploy-AKS-Policy
+- Deploy-SQL-DB-Auditing
+- Deploy-VM-Backup
+- Deploy-SQL-Security
+- Deny-Priv-Escalation-AKS
+- Deny-Priv-Containers-AKS
+- Deny-http-Ingress-AKS
 
 ### es_management
-_details coming soon_
+
+In a default configuration, the `es_management` archetype definition is applied to the `${var.root_id}-management` Management Group. Previously this archetype contained no entries (equivalent to the `default_empty` archetype.)
+
+To bring this in alignment with the Enterprise-scale reference architecture, the following Policy Assignments will now be created by this archetype from v0.1.0 onwards:
+
+- Deploy-Log-Analytics
 
 ## Will this happen again?
 
