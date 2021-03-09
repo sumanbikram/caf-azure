@@ -31,7 +31,7 @@ The following changes have been made within the module which may cause issues wh
     - es_landing_zones
     - es_management
 
-| Resource Type | Removals | Additions | Notes |
+| Resource Type | Resource Name (v0.0.8) | Resource Name (v0.1.0) | Notes |
 | :--- | :--- | :--- | :--- |
 | azurerm_policy_assignment | ES-Allowed-Locations | Allow-Resource-Locations | |
 | azurerm_policy_assignment | ES-Allowed-RSG-Locations | Allow-RSG-Locations | |
