@@ -4,7 +4,9 @@ The [Terraform Module for Cloud Adoption Framework Enterprise-scale][terraform-r
 
 ![Enterprise-scale Landing Zone Architecture][TFAES-Overview]
 
-The module provides a consistent approach for deploying the following components from the Enterprise-scale critical design areas:
+## Critical design areas
+
+The module provides a consistent approach for deploying and managing resources relating to the following Enterprise-scale critical design areas:
 
 - [Management Group and Subscription organisation][management-group-and-subscription-organization]
   - Create the Management Group resource hierarchy
@@ -12,6 +14,8 @@ The module provides a consistent approach for deploying the following components
   - Create custom Policy Assignments, Policy Definitions and Policy Set Definitions (Initiatives)
 - [Identity and access management][identity-and-access-management]
   - Create custom Role Assignments and Role Definitions
+
+## Resources
 
 The following resource types are deployed and managed by this module:
 
@@ -25,7 +29,9 @@ The following resource types are deployed and managed by this module:
 | Role Assignments | [`Microsoft.Authorization/roleAssignments`][arm_role_assignment] | [`azurerm_role_assignment`][azurerm_role_assignment] |
 | Role Definitions | [`Microsoft.Authorization/roleDefinitions`][arm_role_definition] | [`azurerm_role_definition`][azurerm_role_definition] |
 
-## Next Steps
+The exact number of resources created depends on the module configuration, but you can expect upwards of `100` resources to be created by this module for a default installation based on the example below.
+
+## Next steps
 
 Check out the [User Guide](./User-Guide), or go straight to our [Examples](./Examples).
 
