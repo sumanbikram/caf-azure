@@ -2,20 +2,39 @@
 
 ## Terraform Module for Cloud Adoption Framework Enterprise-scale
 
-- [Home](./Home)
-- [User Guide](./User-Guide)
-  - [Getting Started](./%5BUser-Guide%5D-Getting-Started)
-  - [Module Variables](./%5BUser-Guide%5D-Module-Variables)
-  - [Archetype Definitions](./%5BUser-Guide%5D-Archetype-Definitions)
-  - [Upgrade from v0.0.8 to v0.1.0](./%5BUser-Guide%5D-Upgrade-from-v0.0.8-to-v0.1.0)
-- [Examples](./Examples)
-  - [Deploy Default Configuration](./%5BExamples%5D-Deploy-Default-Configuration)
-  - [Deploy Demo Landing Zone Archetypes](./%5BExamples%5D-Deploy-Demo-Landing-Zone-Archetypes)
-  - [Deploy Custom Landing Zone Archetypes](./%5BExamples%5D-Deploy-Custom-Landing-Zone-Archetypes)
-- [Frequently Asked Questions](./Frequently-Asked-Questions)
-- [Troubleshooting](./Troubleshooting)
-- [Contributing](./Contributing)
-  - [Raising an Issue](./Raising-an-Issue)
-  - [Feature Requests](./Feature-Requests)
-  - [Contributing to Code](./Contributing-to-Code)
-  - [Contributing to Documentation](./Contributing-to-Documentation)
+- [Home][wiki_home]
+- [User Guide][wiki_user_guide]
+  - [Getting Started][wiki_getting_started]
+  - [Module Variables][wiki_module_variables]
+  - [Archetype Definitions][wiki_archetype_definitions]
+  - [Upgrade from v0.0.8 to v0.1.0][wiki_upgrade_from_v0_0_8_to_v0_1_0]
+- [Examples][wiki_examples]
+  - [Deploy Default Configuration][wiki_deploy_default_configuration]
+  - [Deploy Demo Landing Zone Archetypes][wiki_deploy_demo_landing_zone_archetypes]
+  - [Deploy Custom Landing Zone Archetypes][wiki_deploy_custom_landing_zone_archetypes]
+- [Frequently Asked Questions][wiki_frequently_asked_questions]
+- [Troubleshooting][wiki_troubleshooting]
+- [Contributing][wiki_contributing]
+  - [Raising an Issue][wiki_raising_an_issue]
+  - [Feature Requests][wiki_feature_requests]
+  - [Contributing to Code][wiki_contributing_to_code]
+  - [Contributing to Documentation][wiki_contributing_to_documentation]
+
+
+[wiki_home]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Home "Wiki - Home"
+[wiki_user_guide]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/User-Guide "Wiki - User Guide"
+[wiki_getting_started]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Getting-Started "Wiki - Getting Started"
+[wiki_module_variables]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Module-Variables "Wiki - Module Variables"
+[wiki_archetype_definitions]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Archetype-Definitions "Wiki - Archetype Definitions"
+[wiki_upgrade_from_v0_0_8_to_v0_1_0]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Upgrade-from-v0.0.8-to-v0.1.0 "Wiki - Upgrade from v0.0.8 to v0.1.0"
+[wiki_examples]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Examples "Wiki - Examples"
+[wiki_deploy_default_configuration]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Default-Configuration "Wiki - Deploy Default Configuration"
+[wiki_deploy_demo_landing_zone_archetypes]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Demo-Landing-Zone-Archetypes "Wiki - Deploy Demo Landing Zone Archetypes"
+[wiki_deploy_custom_landing_zone_archetypes]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Custom-Landing-Zone-Archetypes "Wiki - Deploy Custom Landing Zone Archetypes"
+[wiki_frequently_asked_questions]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Frequently-Asked-Questions "Wiki - Frequently Asked Questions"
+[wiki_troubleshooting]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Troubleshooting "Wiki - Troubleshooting"
+[wiki_contributing]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Contributing "Wiki - Contributing"
+[wiki_raising_an_issue]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Raising-an-Issue "Wiki - Raising an Issue"
+[wiki_feature_requests]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Feature-Requests "Wiki - Feature Requests"
+[wiki_contributing_to_code]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Contributing-to-Code "Wiki - Contributing to Code"
+[wiki_contributing_to_documentation]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Contributing-to-Documentation "Wiki - Contributing to Documentation"
