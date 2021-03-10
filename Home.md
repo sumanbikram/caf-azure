@@ -2,7 +2,7 @@
 
 The [Terraform Module for Cloud Adoption Framework Enterprise-scale][terraform-registry-caf-enterprise-scale] provides an opinionated approach for delivering the core platform capabilities needed to start building Azure landing zones using Terraform. This module deploys the foundations of the [Cloud Adoption Framework enterprise-scale landing zone architecture][ESLZ-Architecture], with a focus on the central resource hierarchy and governance:
 
-![Enterprise-scale Landing Zone Architecture][ESLZ-Architecture-Diagram]
+![Enterprise-scale Landing Zone Architecture][TFAES-Overview]
 
 The module provides a consistent approach for deploying the following components from the Enterprise-scale critical design areas:
 
@@ -33,7 +33,7 @@ Check out the [User Guide](./User-Guide), or go straight to our [Examples](./Exa
  [//]: # (INSERT IMAGE REFERENCES BELOW)
  [//]: # (*****************************)
 
-[ESLZ-Architecture-Diagram]: media/terraform-caf-enterprise-scale-overview.png "Cloud Adoption Framework Enterprise-scale Landing Zone architecture diagram."
+[TFAES-Overview]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/media/terraform-caf-enterprise-scale-overview.png "Diagram showing the Cloud Adoption Framework Enterprise-scale Landing Zone architecture deployed by this module."
 
  [//]: # (************************)
  [//]: # (INSERT LINK LABELS BELOW)
