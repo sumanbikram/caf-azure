@@ -149,4 +149,4 @@ Role Assignments can be created using the `custom_landing_zones.${management_gro
  [//]: # (INSERT LINK LABELS BELOW)
  [//]: # (************************)
 
-[TFAES-Library]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/tree/main/modules/terraform-azurerm-caf-enterprise-scale-archetypes/lib
+[TFAES-Library]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/tree/main/modules/archetypes/lib
