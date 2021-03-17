@@ -14,7 +14,7 @@ Before getting started with this module, please take note of the following consi
 
 1. As of version `0.0.8` this module now supports the creation of Role Assignments for any valid Policy Assignment deployed using the module. This feature enumerates the appropriate role(s) needed by the assigned Policy Definition or Policy Set Definition and creates the necessary Role Assignments for the auto-generated Managed Identity at the same scope as the Policy Assignment. This capability provides feature parity with the Azure Portal experience when creating Policy Assignments using the `DeployIfNotExists` or `Modify` effects. If the Policy Assignment needs to interact with resources not under the same scope as the Policy Assignment, you will need to create additional Role Assignments at the appropriate scope.
 
-1. In release version `0.1.0`, there are a number of major updates to policies and roles which should be considered before upgrading. Please refer to the [upgrade guide][wiki_upgrade_from_v0_0_8_to_v0_1_0] for more information.
+1. In release version `0.1.0` onwards, there are a number of major updates to policies and roles which should be considered before upgrading. Please refer to the [upgrade guide][wiki_upgrade_from_v0_0_8_to_v0_1_0] for more information.
 
 ## Provisioning Instructions
 
@@ -23,7 +23,7 @@ Copy and paste the following 'module' block into your Terraform configuration, i
 ```hcl
 module "caf-enterprise-scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
-  version = "0.1.0"
+  version = "0.1.1"
   # insert the 1 required variable here
 }
 ```
