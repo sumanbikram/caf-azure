@@ -1,30 +1,32 @@
 ## Overview
 
-This page describes how to deploy Enterprise-scale with a starter configuration based mainly on module defaults.
+This example code will deploy the minimum recommended management group and subscription organization from the enterprise-scale reference architecture.
+You can then start to customize your deployment once you've got this up and running.
 
 This is a good starting point when first discovering what resources are created by this module.
 
-> NOTE: Although only `root_parent_id` is required, we recommend setting `root_id` and `root_name` to something more meaningful. Changing `root_id` will result in the entire deployment to be re-provisioned.
+> IMPORTANT: Ensure the module version is set to the latest
 
-## Example Root Module
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Azure/terraform-azurerm-caf-enterprise-scale?style=flat-square)
+
+## Example root module
+
+> TIP: Although only `root_parent_id` is required, we recommend setting `root_id` and `root_name` to something more meaningful. Changing `root_id` will result in the entire deployment to be re-provisioned.
 
 To keep things simple, the root module for this example is based on a single file:
 
-- `main.tf`
-
-For production deployments, we recommend splitting your root module into multiple files to make the code easier to maintain when extending your configuration.
-
-**File: `main.tf`**
+**`main.tf`**
 
 ```hcl
-# Configure Terraform to set the required AzureRM provider
-# version and features{} block.
+
+# We strongly recommend using the required_providers block to set the
+# Azure Provider source and version being used.
 
 terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 2.34.0"
+      version = ">= 2.46.1"
     }
   }
 }
@@ -33,35 +35,29 @@ provider "azurerm" {
   features {}
 }
 
-# Get the current client configuration from the AzureRM provider.
-# This is used to populate the root_parent_id variable with the
-# current Tenant ID used as the ID for the "Tenant Root Group"
-# Management Group.
+# You can use the azurerm_client_config data resource to dynamically
+# extract the current Tenant ID from your connection settings.
 
 data "azurerm_client_config" "current" {}
 
-# Use variables to customise the deployment
-
-variable "root_id" {
-  type    = string
-  default = "es"
-}
-
-variable "root_name" {
-  type    = string
-  default = "Enterprise-Scale"
-}
-
-# Declare the Terraform Module for Cloud Adoption Framework
-# Enterprise-scale and provide a base configuration.
+# Call the caf-enterprise-scale module directly from the Terraform Registry
+# pinning to the latest version
 
 module "enterprise_scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
   version = "0.1.1"
 
   root_parent_id = data.azurerm_client_config.current.tenant_id
-  root_id        = var.root_id
-  root_name      = var.root_name
+  root_id        = "myorg-1"
+  root_name      = "My Organization 1"
 
 }
 ```
+
+## **Deployed Management Groups**
+
+![Deploy-Default-Configuration](./media/examples-deploy-default-configuration.png)
+
+You have successfully created the default Management Group resource hierarchy, along with the recommended Azure Policy and Access control (IAM) settings for Enterprise-scale.
+
+> TIP: The exact number of resources created depends on the module configuration, but you can expect upwards of 140 resources to be created by this module for a default installation.

@@ -8,27 +8,31 @@ This page describes how to deploy Enterprise-scale with a starter configuration 
 
 These demo Landing Zone archetypes provides a good way to learn about archetypes within the Enterprise-scale architecture but should not be used for production workloads.
 
-> NOTE: Although only `root_parent_id` is required, we recommend setting `root_id` and `root_name` to something more meaningful. Changing `root_id` will result in the entire deployment to be re-provisioned.
+> IMPORTANT: Ensure the module version is set to the latest
 
-## Example Root Module
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Azure/terraform-azurerm-caf-enterprise-scale?style=flat-square)
+
+> TIP: What is an archetype?
+> An archetype defines which Azure Policy and Access control (IAM) settings are needed to secure and configure the Landing Zones with everything needed for safe handover to the Landing Zone owner.
+> The archetype is what fundamentally transforms Management Groups and Subscriptions into Landing Zones.
+
+## Example root module
+
+> NOTE: Although only `root_parent_id` is required, we recommend setting `root_id` and `root_name` to something more meaningful. Changing `root_id` will result in the entire deployment to be re-provisioned.
 
 To keep things simple, the root module for this example is based on a single file:
 
-- `main.tf`
-
-For production deployments, we recommend splitting your root module into multiple files to make the code easier to maintain when extending your configuration.
-
-**File: `main.tf`**
+**`main.tf`**
 
 ```hcl
-# Configure Terraform to set the required AzureRM provider
-# version and features{} block.
+# We strongly recommend using the required_providers block to set the
+# Azure Provider source and version being used.
 
 terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 2.34.0"
+      version = ">= 2.46.1"
     }
   }
 }
@@ -37,24 +41,10 @@ provider "azurerm" {
   features {}
 }
 
-# Get the current client configuration from the AzureRM provider.
-# This is used to populate the root_parent_id variable with the
-# current Tenant ID used as the ID for the "Tenant Root Group"
-# Management Group.
+# You can use the azurerm_client_config data resource to dynamically
+# extract the current Tenant ID from your connection settings.
 
 data "azurerm_client_config" "current" {}
-
-# Use variables to customise the deployment
-
-variable "root_id" {
-  type    = string
-  default = "es"
-}
-
-variable "root_name" {
-  type    = string
-  default = "Enterprise-Scale"
-}
 
 # Declare the Terraform Module for Cloud Adoption Framework
 # Enterprise-scale and provide a base configuration.
@@ -64,10 +54,18 @@ module "enterprise_scale" {
   version = "0.1.1"
 
   root_parent_id = data.azurerm_client_config.current.tenant_id
-  root_id        = var.root_id
-  root_name      = var.root_name
+  root_id        = "myorg-2"
+  root_name      = "My Organization 2"
 
   deploy_demo_landing_zones = true
 
 }
 ```
+
+## **Deployed Management Groups**
+
+![Deploy-Default-Configuration](./media/examples-deploy-demo-landing-zone-archetypes.png)
+
+You have successfully created the default Management Group resource hierarchy including additional Management Groups for demonstrating Landing Zone archetypes, along with the recommended Azure Policy and Access control (IAM) settings for Enterprise-scale.
+
+> TIP: The exact number of resources created depends on the module configuration, but you can expect upwards of 140 resources to be created by this module for a default installation.
