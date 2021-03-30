@@ -138,9 +138,9 @@ module "enterprise_scale" {
 }
 ```
 
-**File: `lib/archetype_definition_customer_online.json`**
+**`lib/archetype_definition_customer_online.json`**
 
-> IMPORTANT: Please ensure you create this file in the `/lib`directory within your root module.
+> IMPORTANT: Please ensure you create this file in the `/lib` directory within your root module.
 
 The `lib/archetype_definition_customer_online.json` file contains a custom "archetype definition". This is a custom JSON format used specifically by the Terraform Module for Cloud Adoption Framework Enterprise-scale.
 
