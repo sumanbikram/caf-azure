@@ -12,6 +12,8 @@
   - [Deploy Default Configuration][wiki_deploy_default_configuration]
   - [Deploy Demo Landing Zone Archetypes][wiki_deploy_demo_landing_zone_archetypes]
   - [Deploy Custom Landing Zone Archetypes][wiki_deploy_custom_landing_zone_archetypes]
+  - [Deploy Nested Landing Zone Instance][wiki_deploy_nested_landing_zone_instance]
+
 - [Frequently Asked Questions][wiki_frequently_asked_questions]
 - [Troubleshooting][wiki_troubleshooting]
 - [Contributing][wiki_contributing]
