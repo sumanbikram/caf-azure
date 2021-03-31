@@ -23,7 +23,7 @@ Copy and paste the following 'module' block into your Terraform configuration, i
 ```hcl
 module "caf-enterprise-scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
-  version = "0.1.1"
+  version = "0.1.2"
   # insert the 1 required variable here
 }
 ```
