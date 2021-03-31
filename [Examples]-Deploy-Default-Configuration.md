@@ -18,7 +18,6 @@ To keep things simple, the root module for this example is based on a single fil
 **`main.tf`**
 
 ```hcl
-
 # We strongly recommend using the required_providers block to set the
 # Azure Provider source and version being used.
 
