@@ -1,5 +1,3 @@
-## Examples
-
 The following examples are designed to help build an understanding of how to use the module, ranging from basic deployments covering the core resource hierarchy from Enterprise-scale, through to more advanced scenarios.
 
 Use the links below to explore these examples in more detail.
