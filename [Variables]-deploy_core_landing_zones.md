@@ -6,7 +6,7 @@ If set to true, will include the core Enterprise-scale Management Group hierarch
 
 ## Default value
 
-`"true"`
+`true`
 
 ## Validation
 
@@ -14,15 +14,20 @@ None
 
 ## Usage
 
-Deploy the core Enterprise-scale Management Group resources.
+Set the value to true or false.
+If set to _false_ with all the other values as _default_, the module will deploy no resources.
+This is for advanced scenarios such as:
 
-**Example:**
+- Nested deployments (see [example](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Using-Module-Nesting))
+- Landing zone resources:
+  - Management (coming soon)
+  - Connectivity (coming soon)
 
 ```hcl
   deploy_core_landing_zones = false
 ```
 
-> Important: If set to _false_ after initial deployment, will destroy all core Enterprise-scale Management Group resources.
+> Important: If changed to _false_ after initial deployment, terraform will destroy all core Enterprise-scale Management Groups and Management Group scoped resources.
 
 [//]: # "************************"
 [//]: # "INSERT LINK LABELS BELOW"

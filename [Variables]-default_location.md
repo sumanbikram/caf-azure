@@ -3,7 +3,6 @@
 [**default_location**][this_page] `string` (optional)
 
 Set the Azure region in which region bound resources will be deployed.
-As this is an optional variable, Enterprise-scale location is set by default to`"eastus"`
 
 ## Default value
 
@@ -17,9 +16,7 @@ None
 
 ## Usage
 
-Deploy the resources in your Azure region of choice.
-
-**Example:**
+Set the value to your [Azure region](https://azure.microsoft.com/en-gb/global-infrastructure/geographies/) of choice.
 
 ```hcl
   default_location = "uksouth"
