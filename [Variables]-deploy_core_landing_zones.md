@@ -1,16 +1,30 @@
 ## Overview
 
-[**deploy_core_landing_zones**][this_page] `bool`
+[**deploy_core_landing_zones**][this_page] `bool` (optional)
 
-Description: OPTIONAL: If set to true, will include the core Enterprise-scale Management Group hierarchy.
+If set to true, will include the core Enterprise-scale Management Group hierarchy.
 
-Default: `true`
+## Default value
+
+`"true"`
+
+## Validation
+
+None
 
 ## Usage
-_coming soon_
 
- [//]: # (************************)
- [//]: # (INSERT LINK LABELS BELOW)
- [//]: # (************************)
+Deploy the core Enterprise-scale Management Group resources.
 
+**Example:**
+
+```hcl
+  deploy_core_landing_zones = false
+```
+
+> Important: If set to _false_ after initial deployment, will destroy all core Enterprise-scale Management Group resources.
+
+[//]: # "************************"
+[//]: # "INSERT LINK LABELS BELOW"
+[//]: # "************************"
 [this_page]: # "Link for the current page."
