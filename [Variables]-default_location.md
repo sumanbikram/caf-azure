@@ -1,16 +1,33 @@
 ## Overview
 
-[**default_location**][this_page] `string`
+[**default_location**][this_page] `string` (optional)
 
-Description: OPTIONAL: If specified, will use set the default location used for resource deployments where needed.
+Set the Azure region in which region bound resources will be deployed.
+As this is an optional variable, Enterprise-scale location is set by default to`"eastus"`
 
-Default: `"eastus"`
+## Default value
+
+`"eastus"`
+
+## Validation
+
+None
+
+> Important: The default location must be a valid Azure region.
 
 ## Usage
-_coming soon_
 
- [//]: # (************************)
- [//]: # (INSERT LINK LABELS BELOW)
- [//]: # (************************)
+Deploy the resources in your Azure region of choice.
 
+**Example:**
+
+```hcl
+  default_location = "uksouth"
+```
+
+> Tip: Changing this value will cause all location bound resources to be recreated
+
+[//]: # "************************"
+[//]: # "INSERT LINK LABELS BELOW"
+[//]: # "************************"
 [this_page]: # "Link for the current page."
