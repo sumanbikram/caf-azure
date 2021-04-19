@@ -19,7 +19,8 @@ Sets a custom delay period after creation of the specified resource type. Used t
 
 ## Validation
 
-Each `create_duration_delay` value must be a string containing the duration in numbers (1-6 digits) followed by the measure of time represented by s (seconds), m (minutes), or h (hours), matching the following RegEx:  
+Each `create_duration_delay` value must be a string containing the duration in numbers (1-6 digits) followed by the measure of time represented by s (seconds), m (minutes), or h (hours), matching the following RegEx:
+
 `^[0-9]{1,6}(s|m|h)$`
 
 ## Usage

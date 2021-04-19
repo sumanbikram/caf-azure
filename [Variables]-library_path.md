@@ -1,16 +1,28 @@
 ## Overview
 
-[**library_path**][this_page] `string`
+[**library_path**][this_page] `string` (optional)
 
-Description: OPTIONAL: If specified, sets the path to a custom library folder for archetype artefacts.
+If specified, sets the path to a custom library folder for archetype artifacts.
 
-Default: `""`
+## Default value
+
+`""`
+
+## Validation
+
+None
 
 ## Usage
-_coming soon_
 
- [//]: # (************************)
- [//]: # (INSERT LINK LABELS BELOW)
- [//]: # (************************)
+Set the path to a custom directory within your root module.
 
-[this_page]: # "Link for the current page."
+```hcl
+  library_path = "${path.root}/lib"
+```
+
+> Important: Please ensure you create the `/lib` directory first within your root module. You can use this custom directory to store all your custom archetype definition templates.
+
+> [//]: # "************************"
+> [//]: # "INSERT LINK LABELS BELOW"
+> [//]: # "************************"
+> [this_page]: # "Link for the current page."
