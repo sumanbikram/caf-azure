@@ -8,7 +8,7 @@ These variables must be set in the `module` block when using this module.
 
 [**root_parent_id**][root_parent_id] `string`
 
-Description: The root_parent_id is used to specify where to set the root for all Landing Zone deployments. Usually the Tenant ID when deploying the core Enterprise-scale Landing Zones.
+The root_parent_id is used to specify where to set the root for all Landing Zone deployments. Usually the Tenant ID when deploying the core Enterprise-scale Landing Zones.
 
 <br>
 
@@ -20,7 +20,7 @@ These variables have default values and don't have to be set to use this module.
 
 [**archetype_config_overrides**][archetype_config_overrides] `map(any)`
 
-Description: OPTIONAL: If specified, will set custom Archetype configurations to the default Enterprise-scale Management Groups.
+If specified, will set custom Archetype configurations to the default Enterprise-scale Management Groups.
 
 Default: `{}`
 
@@ -28,9 +28,10 @@ Default: `{}`
 
 [**create_duration_delay**][create_duration_delay] `map(string)`
 
-Description: OPTIONAL: Used to tune terraform apply when faced with errors caused by API caching or eventual consistency. Sets a custom delay period after creation of the specified resource type.
+Used to tune `terraform apply` when faced with errors caused by API caching or eventual consistency. Sets a custom delay period after creation of the specified resource type.
 
 Default:
+
 ```
 {
   azurerm_management_group      = "30s"
@@ -46,7 +47,7 @@ Default:
 
 [**custom_landing_zones**][custom_landing_zones] `map( object({ display_name = string parent_management_group_id = string subscription_ids = list(string) archetype_config = object({ archetype_id = string parameters = any access_control = any }) }) )`
 
-Description: OPTIONAL: If specified, will deploy additional Management Groups alongside Enterprise-scale core Management Groups.
+If specified, will deploy additional Management Groups alongside Enterprise-scale core Management Groups.
 
 Default: `{}`
 
@@ -54,7 +55,7 @@ Default: `{}`
 
 [**default_location**][default_location] `string`
 
-Description: OPTIONAL: If specified, will use set the default location used for resource deployments where needed.
+If specified, will use set the default location used for resource deployments where needed. #check_value will use set the default == is wording right?
 
 Default: `"eastus"`
 
@@ -62,7 +63,7 @@ Default: `"eastus"`
 
 [**deploy_core_landing_zones**][deploy_core_landing_zones] `bool`
 
-Description: OPTIONAL: If set to true, will include the core Enterprise-scale Management Group hierarchy.
+If set to true, will include the core Enterprise-scale Management Group hierarchy.
 
 Default: `true`
 
@@ -70,7 +71,7 @@ Default: `true`
 
 [**deploy_demo_landing_zones**][deploy_demo_landing_zones] `bool`
 
-Description: OPTIONAL: If set to true, will include the demo "Landing Zone" Management Groups.
+If set to true, will include the demo "Landing Zone" Management Groups.
 
 Default: `false`
 
@@ -78,9 +79,10 @@ Default: `false`
 
 [**destroy_duration_delay**][destroy_duration_delay] `map(string)`
 
-Description: OPTIONAL: Used to tune terraform deploy when faced with errors caused by API caching or eventual consistency. Sets a custom delay period after destruction of the specified resource type.
+Used to tune terraform deploy when faced with errors caused by API caching or eventual consistency. Sets a custom delay period after destruction of the specified resource type. ##check_value tune terraform deploy == terraform destroy?
 
 Default:
+
 ```
 {
   azurerm_management_group      = "0s"
@@ -96,15 +98,14 @@ Default:
 
 [**library_path**][library_path] `string`
 
-Description: OPTIONAL: If specified, sets the path to a custom library folder for archetype artefacts.
+If specified, sets the path to a custom library folder for archetype artefacts. #check_value artefacts == is it artifacts? Update the code vars code
 
 Default: `""`
-
 <br>
 
 [**root_id**][root_id] `string`
 
-Description: OPTIONAL: If specified, will set a custom Name (ID) value for the Enterprise-scale "root" Management Group, and append this to the ID for all core Enterprise-scale Management Groups.
+If specified, will set a custom Name (ID) value for the Enterprise-scale "root" Management Group, and append this to the ID for all core Enterprise-scale Management Groups.
 
 Default: `"es"`
 
@@ -112,7 +113,7 @@ Default: `"es"`
 
 [**root_name**][root_name] `string`
 
-Description: OPTIONAL: If specified, will set a custom DisplayName value for the Enterprise-scale "root" Management Group.
+If specified, will set a custom DisplayName value for the Enterprise-scale "root" Management Group.
 
 Default: `"Enterprise-Scale"`
 
@@ -120,7 +121,7 @@ Default: `"Enterprise-Scale"`
 
 [**subscription_id_overrides**][subscription_id_overrides] `map(list(string))`
 
-Description: OPTIONAL: If specified, will be used to assign subscription_ids to the default Enterprise-scale Management Groups.
+If specified, will be used to assign subscription_ids to the default Enterprise-scale Management Groups.
 
 Default: `{}`
 
@@ -128,24 +129,22 @@ Default: `{}`
 
 [**template_file_variables**][template_file_variables] `map(any)`
 
-Description: OPTIONAL: If specified, provides the ability to define custom template variables used when reading in template files from the built-in and custom library_path.
+If specified, provides the ability to define custom template variables used when reading in template files from the built-in and custom library_path.
 
 Default: `{}`
 
 <br>
 
-
-A summary of these variables can also be found on the [Inputs][ESTF-Inputs] tab of the module entry in Terraform Registry.
+A summary of these variables can also be found on the [Inputs][estf-inputs] tab of the module entry in Terraform Registry.
 
 ## Next steps
 
 Now you understand how to customize your deployment using the input variables, check out our [Examples](./Examples).
 
- [//]: # (************************)
- [//]: # (INSERT LINK LABELS BELOW)
- [//]: # (************************)
-
-[ESTF-Inputs]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest?tab=inputs "Terraform Registry: Terraform Module for Cloud Adoption Framework Enterprise-scale - Inputs"
+[//]: # "************************"
+[//]: # "INSERT LINK LABELS BELOW"
+[//]: # "************************"
+[estf-inputs]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest?tab=inputs "Terraform Registry: Terraform Module for Cloud Adoption Framework Enterprise-scale - Inputs"
 [root_parent_id]: ./%5BVariables%5D-root_parent_id "Instructions for how to use the root_parent_id variable."
 [root_id]: ./%5BVariables%5D-root_id "Instructions for how to use the root_id variable."
 [root_name]: ./%5BVariables%5D-root_name "Instructions for how to use the root_name variable."
