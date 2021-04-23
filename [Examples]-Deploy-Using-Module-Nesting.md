@@ -12,7 +12,7 @@ The extra code needed to extend your configuration, is the following:
 
 module "enterprise_scale_nested_landing_zone" {
   source = "Azure/caf-enterprise-scale/azurerm"
-  version = "0.1.2"
+  version = "0.2.0"
 
 
   root_parent_id            = "${var.root_id}-landing-zones"
@@ -128,7 +128,7 @@ data "azurerm_client_config" "current" {}
 
 module "enterprise_scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
-  version = "0.1.2"
+  version = "0.2.0"
 
   root_parent_id = data.azurerm_client_config.current.tenant_id
   root_id        = var.root_id
@@ -175,7 +175,7 @@ module "enterprise_scale" {
 
 module "enterprise_scale_nested_landing_zone" {
   source = "Azure/caf-enterprise-scale/azurerm"
-  version = "0.1.2"
+  version = "0.2.0"
 
 
   root_parent_id            = "${var.root_id}-landing-zones"
