@@ -39,7 +39,7 @@ The main block parameters are `display_name`, `parent_management_group_id`, `sub
 
 `parent_management_group_id` is the name of the parent Management Group and must be a valid Management Group ID.
 
-``subscription_ids` is an object containing a list of Subscription IDs to assign to the current Management Group.
+`subscription_ids` is an object containing a list of Subscription IDs to assign to the current Management Group.
 
 [`archetype_config`](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Archetype-Definitions) is used to configure archetype settings applied to each Management Group. This object must contain valid entries for the `archetype_id` `parameters`, and `access_control` attributes.
 
