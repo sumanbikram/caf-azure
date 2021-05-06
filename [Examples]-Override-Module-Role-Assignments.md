@@ -145,7 +145,7 @@ module "enterprise_scale" {
 }
 ```
 
-- **`lib/policy_assignments/policy_assignment_dhh_policy_set_definition.json`**
+**`lib/policy_assignments/policy_assignment_dhh_policy_set_definition.json`**
 
 In the `/lib` directory create a `policy_assignments` subdirectory.
 
@@ -184,7 +184,7 @@ In the subdirectory `policy_assignments` create a `policy_assignment_dhh_policy_
 }
 ```
 
-- **`lib/policy_assignments/policy_assignment_dsa_policy_set_definition.json`**
+**`lib/policy_assignments/policy_assignment_dsa_policy_set_definition.json`**
 
 In the subdirectory `policy_assignments` create a `policy_assignment_dsa_policy_set_definition.json` file. This files contains the Policy Assignment definition for `Deploy-SQL-Auditing`
 
@@ -217,7 +217,7 @@ In the subdirectory `policy_assignments` create a `policy_assignment_dsa_policy_
 
 > IMPORTANT: Please ensure you create this file in the `/lib` directory within your root module.
 
-- **`lib/archetype_definitions/archetype_definition_customer_online.json`**
+**`lib/archetype_definitions/archetype_definition_customer_online.json`**
 
 In the `/lib` directory create an `archetype_definitions` subdirectory.
 
