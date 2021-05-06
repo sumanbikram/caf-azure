@@ -94,7 +94,7 @@ data "azurerm_client_config" "current" {}
 
 module "enterprise_scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
-  version = "0.2.0"
+  version = "0.3.0"
 
   root_parent_id = data.azurerm_client_config.current.tenant_id
   root_id        = var.root_id
@@ -120,14 +120,10 @@ module "enterprise_scale" {
         archetype_id   = "customer_online"
         parameters     = {
           Deny-Resource-Locations = {
-            listOfAllowedLocations = jsonencode([
-              "eastus",
-            ])
+            listOfAllowedLocations = ["eastus",]
           }
           Deny-RSG-Locations = {
-            listOfAllowedLocations = jsonencode([
-              "eastus",
-            ])
+            listOfAllowedLocations = ["eastus",]
           }
         }
         access_control = {}
