@@ -10,7 +10,7 @@ Use the links below to explore these examples in more detail.
 ### Intermediate (Level 200)
 
 - [Deploy Custom Landing Zone Archetypes][wiki_deploy_custom_landing_zone_archetypes]
-- [Expand Built-in Archetype Definitions][wiki_expand-built-in-archetype-definitions]
+- [Expand Built-in Archetype Definitions][wiki_expand_built_in_archetype_definitions]
 
 ### Advanced (Level 300)
 
