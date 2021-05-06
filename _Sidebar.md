@@ -14,7 +14,9 @@
   - [Deploy Default Configuration][wiki_deploy_default_configuration]
   - [Deploy Demo Landing Zone Archetypes][wiki_deploy_demo_landing_zone_archetypes]
   - [Deploy Custom Landing Zone Archetypes][wiki_deploy_custom_landing_zone_archetypes]
+  - [Expand Built-in Archetype Definitions][wiki_expand_built_in_archetype_definitions]
   - [Deploy Using Module Nesting][wiki_deploy_using_module_nesting]
+  - [Override Module Role Assignments][wiki_override_module_role_assignments]
 - [Frequently Asked Questions][wiki_frequently_asked_questions]
 - [Troubleshooting][wiki_troubleshooting]
 - [Contributing][wiki_contributing]
@@ -23,10 +25,9 @@
   - [Contributing to Code][wiki_contributing_to_code]
   - [Contributing to Documentation][wiki_contributing_to_documentation]
 
- [//]: # (************************)
- [//]: # (INSERT LINK LABELS BELOW)
- [//]: # (************************)
-
+[//]: # "************************"
+[//]: # "INSERT LINK LABELS BELOW"
+[//]: # "************************"
 [wiki_home]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/Home "Wiki - Home"
 [wiki_user_guide]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/User-Guide "Wiki - User Guide"
 [wiki_getting_started]: https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Getting-Started "Wiki - Getting Started"
