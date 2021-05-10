@@ -1,6 +1,6 @@
 ## Overview
 
-[**archetype_config_overrides**](./) (optional)
+[**archetype_config_overrides**](#overview) (optional)
 
 ```hcl
 map(
