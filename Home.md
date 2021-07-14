@@ -91,6 +91,8 @@ Check out the [User Guide](./User-Guide), or go straight to our [Examples](./Exa
  [//]: # (************************)
 
 [ESLZ-Architecture]: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/architecture "Enterprise-scale Reference Architecture"
+[ESLZ-Management]:   https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring
+
 [terraform-registry-caf-enterprise-scale]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest "Terraform Registry: Terraform Module for Cloud Adoption Framework Enterprise-scale"
 [management-group-and-subscription-organization]: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/management-group-and-subscription-organization "Cloud Adoption Framework: Management group and subscription organization"
 [identity-and-access-management]: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/identity-and-access-management "Cloud Adoption Framework: Identity and access management"
