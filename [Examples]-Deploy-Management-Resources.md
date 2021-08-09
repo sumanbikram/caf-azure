@@ -91,11 +91,11 @@ You have also successfully created the default set of Management resources in yo
 
 ## Next steps
 
-Go to our next example to learn how to deploy the [Management resources with custom settings][wiki_management_resources_custom].
+Go to our next example to learn how to deploy the [Management resources with custom settings][wiki_deploy_management_resources_custom].
 
 [//]: # "************************"
 [//]: # "INSERT LINK LABELS BELOW"
 [//]: # "************************"
 
-[wiki_management_resources]:                  ./%5BUser-Guide%5D-Management-Resources "Wiki - Management Resources"
-[wiki_management_resources_custom]:           ./%5BUser-Guide%5D-Management-Resources-With-Custom-Settings "Wiki - Management Resources"
+[wiki_management_resources]:               ./%5BUser-Guide%5D-Management-Resources "Wiki - Management Resources"
+[wiki_deploy_management_resources_custom]: ./%5BUser-Guide%5D-Deploy-Management-Resources-With-Custom-Settings "Wiki - Management Resources"
