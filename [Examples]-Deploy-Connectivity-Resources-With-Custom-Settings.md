@@ -66,7 +66,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 2.96.0"
+      version = ">= 3.0.2"
     }
   }
 }
@@ -137,12 +137,12 @@ It also contains the module declaration for this module, containing a number of 
 
 data "azurerm_client_config" "core" {}
 
-# Declare the Terraform Module for Cloud Adoption Framework
-# Enterprise-scale and provide a base configuration.
+# Declare the Azure landing zones Terraform module
+# and provide a base configuration.
 
 module "enterprise_scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
-  version = "1.1.4"
+  version = "2.0.0"
 
   providers = {
     azurerm              = azurerm
@@ -192,8 +192,14 @@ locals {
             azure_firewall = {
               enabled = true
               config = {
-                address_prefix   = "10.100.0.0/24"
-                enable_dns_proxy = true
+                address_prefix                = "10.100.0.0/24"
+                enable_dns_proxy              = true
+                dns_servers                   = []
+                sku_tier                      = ""
+                base_policy_id                = ""
+                private_ip_ranges             = []
+                threat_intelligence_mode      = ""
+                threat_intelligence_allowlist = []
                 availability_zones = {
                   zone_1 = true
                   zone_2 = true
@@ -225,8 +231,14 @@ locals {
             azure_firewall = {
               enabled = false
               config = {
-                address_prefix   = ""
-                enable_dns_proxy = true
+                address_prefix                = ""
+                enable_dns_proxy              = true
+                dns_servers                   = []
+                sku_tier                      = ""
+                base_policy_id                = ""
+                private_ip_ranges             = []
+                threat_intelligence_mode      = ""
+                threat_intelligence_allowlist = []
                 availability_zones = {
                   zone_1 = true
                   zone_2 = true
