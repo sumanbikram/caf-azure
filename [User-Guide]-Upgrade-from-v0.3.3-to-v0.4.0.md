@@ -98,7 +98,7 @@ The following changes have been made within the module which may cause issues wh
   - `Enable-DDoS-VNET` added
   - `Enforce-TLS-SSL` added
 
-> NOTE: All references to resource names are **_Case Sensitive_**. Failure to use the correct case will result in an `Invalid index` error when running `terraform plan`, such as the following example:
+> **NOTE:** All references to resource names are **_Case Sensitive_**. Failure to use the correct case will result in an `Invalid index` error when running `terraform plan`, such as the following example:
 
 ```shell
 Error: Invalid index
@@ -257,7 +257,7 @@ The following PowerShell script can be used to assist with this process, using a
 
 Unfortunately it is not possible to take this approach with the [`azurerm_policy_assignment` (deprecated)][azurerm_policy_assignment] resources, as these are being changed to a different resource type. As such, these resources will be redeployed as part of the upgrade process.
 
-To provide consistency across `Connectivity`, `Identity`, and `Management` resource configuration, the \[*currently undocumented*\] `configure_management_resources.advanced.custom_settings_by_resource_type` configuration object has also been updated to follow a consistent schema.
+To provide consistency across `Connectivity`, `Identity`, and `Management` resource configuration, the \[_currently undocumented_\] `configure_management_resources.advanced.custom_settings_by_resource_type` configuration object has also been updated to follow a consistent schema.
 
 ### Outputs
 
