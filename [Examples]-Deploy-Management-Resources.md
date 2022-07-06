@@ -7,7 +7,7 @@ In this example, we take the [default configuration][wiki_deploy_default_configu
 
 - Set `deploy_management_resources` to enable creation of the default Management resources,including:
   - Resource Group to contain all Management resources.
-  - Log Analytics workspace to use for centralised logging.
+  - Log Analytics workspace to use for centralized logging.
   - Automation Account to enable additional capabilities as part of the included Solutions for Azure Monitor.
   - Recommended Solutions for Azure Monitor.
 - Set the `subscription_id_management` value to ensure the Subscription is moved to the correct Management Group, and policies are updated with the correct values.
@@ -61,7 +61,7 @@ data "azurerm_client_config" "core" {}
 
 module "enterprise_scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
-  version = "2.1.1"
+  version = "2.1.2"
 
   providers = {
     azurerm              = azurerm
