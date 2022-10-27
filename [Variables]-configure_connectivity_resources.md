@@ -1,7 +1,7 @@
 <!-- markdownlint-disable first-line-h1 -->
 ## Overview
 
-[**configure_connectivity_resources**](#overview) [*see validation for type*](#validation) (optional)
+[**configure_connectivity_resources**](#overview) [*see validation for type*](#Validation) (optional)
 
 If specified, will customize the "connectivity" landing zone settings and resources.
 
@@ -119,64 +119,47 @@ If specified, will customize the "connectivity" landing zone settings and resour
       config = {
         location = ""
         enable_private_link_by_service = {
-          azure_api_management                 = true
-          azure_app_configuration_stores       = true
-          azure_arc                            = true
-          azure_automation_dscandhybridworker  = true
           azure_automation_webhook             = true
-          azure_backup                         = true
-          azure_batch_account                  = true
-          azure_bot_service_bot                = true
-          azure_bot_service_token              = true
-          azure_cache_for_redis                = true
-          azure_cache_for_redis_enterprise     = true
-          azure_container_registry             = true
+          azure_automation_dscandhybridworker  = true
+          azure_sql_database_sqlserver         = true
+          azure_synapse_analytics_sqlserver    = true
+          azure_synapse_analytics_sql          = true
+          storage_account_blob                 = true
+          storage_account_table                = true
+          storage_account_queue                = true
+          storage_account_file                 = true
+          storage_account_web                  = true
+          azure_data_lake_file_system_gen2     = true
+          azure_cosmos_db_sql                  = true
+          azure_cosmos_db_mongodb              = true
           azure_cosmos_db_cassandra            = true
           azure_cosmos_db_gremlin              = true
-          azure_cosmos_db_mongodb              = true
-          azure_cosmos_db_sql                  = true
           azure_cosmos_db_table                = true
-          azure_data_explorer                  = true
+          azure_database_for_postgresql_server = true
+          azure_database_for_mysql_server      = true
+          azure_database_for_mariadb_server    = true
+          azure_key_vault                      = true
+          azure_kubernetes_service_management  = true
+          azure_search_service                 = true
+          azure_container_registry             = true
+          azure_app_configuration_stores       = true
+          azure_backup                         = true
+          azure_site_recovery                  = true
+          azure_event_hubs_namespace           = true
+          azure_service_bus_namespace          = true
+          azure_iot_hub                        = true
+          azure_relay_namespace                = true
+          azure_event_grid_topic               = true
+          azure_event_grid_domain              = true
+          azure_web_apps_sites                 = true
+          azure_machine_learning_workspace     = true
+          signalr                              = true
+          azure_monitor                        = true
+          cognitive_services_account           = true
+          azure_file_sync                      = true
           azure_data_factory                   = true
           azure_data_factory_portal            = true
-          azure_data_lake_file_system_gen2     = true
-          azure_database_for_mariadb_server    = true
-          azure_database_for_mysql_server      = true
-          azure_database_for_postgresql_server = true
-          azure_digital_twins                  = true
-          azure_event_grid_domain              = true
-          azure_event_grid_topic               = true
-          azure_event_hubs_namespace           = true
-          azure_file_sync                      = true
-          azure_hdinsights                     = true
-          azure_iot_hub                        = true
-          azure_key_vault                      = true
-          azure_key_vault_managed_hsm          = true
-          azure_kubernetes_service_management  = true
-          azure_machine_learning_workspace     = true
-          azure_media_services                 = true
-          azure_migrate                        = true
-          azure_monitor                        = true
-          azure_purview_account                = true
-          azure_purview_studio                 = true
-          azure_relay_namespace                = true
-          azure_search_service                 = true
-          azure_service_bus_namespace          = true
-          azure_site_recovery                  = true
-          azure_sql_database_sqlserver         = true
-          azure_synapse_analytics_dev          = true
-          azure_synapse_analytics_sql          = true
-          azure_synapse_studio                 = true
-          azure_web_apps_sites                 = true
-          azure_web_apps_static_sites          = true
-          cognitive_services_account           = true
-          microsoft_power_bi                   = true
-          signalr                              = true
-          storage_account_blob                 = true
-          storage_account_file                 = true
-          storage_account_queue                = true
-          storage_account_table                = true
-          storage_account_web                  = true
+          azure_cache_for_redis                = true
         }
         private_link_locations                                 = []
         public_dns_zones                                       = []
@@ -378,8 +361,7 @@ object({
           azure_automation_webhook             = bool
           azure_automation_dscandhybridworker  = bool
           azure_sql_database_sqlserver         = bool
-          azure_synapse_studio                 = bool
-          azure_synapse_analytics_dev          = bool
+          azure_synapse_analytics_sqlserver    = bool
           azure_synapse_analytics_sql          = bool
           storage_account_blob                 = bool
           storage_account_table                = bool
@@ -417,20 +399,6 @@ object({
           azure_data_factory                   = bool
           azure_data_factory_portal            = bool
           azure_cache_for_redis                = bool
-          azure_purview                        = bool
-          azure_purview_studio                 = bool
-          azure_batch_account                  = bool
-          azure_key_vault_managed_hsm                    = bool
-          azure_cache_for_redis_enterprise     = bool
-          azure_digital_twins                  = bool
-          azure_hdinsights                     = bool
-          azure_media_services                 = bool
-          azure_migrate                        = bool
-          azure_arc                            = bool
-          azure_api_management                 = bool
-          azure_data_explorer                  = bool
-          microsoft_power_bi                   = bool
-          azure_bot_service                    = bool
         })
         private_link_locations                                 = list(string)
         public_dns_zones                                       = list(string)
@@ -568,6 +536,8 @@ See [Using the Advanced Block with connectivity resources][wiki_connectivity_adv
 [//]: # "INSERT LINK LABELS BELOW"
 [//]: # "************************"
 
+[this_page]: # "Link for the current page."
+
 [wiki_ddos_variable]:                        %5BVariables%5D-configure_connectivity_resources.settings.ddos_protection_plan "Wiki - configure_connectivity_resources settings ddos"
 [wiki_dns_variable]:                         %5BVariables%5D-configure_connectivity_resources.settings.dns "Wiki - configure_connectivity_resources settings dns"
 [wiki_hub_networks_variable]:                %5BVariables%5D-configure_connectivity_resources.settings.hub_networks "Wiki - configure_connectivity_resources settings hub_networks"
@@ -579,3 +549,5 @@ See [Using the Advanced Block with connectivity resources][wiki_connectivity_adv
 [wiki_connectivity_resources_virtual_wan]:   %5BUser-Guide%5D-Connectivity-Resources#virtual-wan-network-topology-microsoft-managed "Wiki - Connectivity resources - Virtual WAN network topology (Microsoft-managed)"
 [wiki_connectivity_resources_ddos]:          %5BUser-Guide%5D-Connectivity-Resources#ddos-protection-plan "Wiki - Connectivity resources - DDoS Protection plan"
 [wiki_connectivity_resources_dns]:           %5BUser-Guide%5D-Connectivity-Resources#dns "Wiki - Connectivity resources - DNS"
+
+[tf_discuss_optional]: https://discuss.hashicorp.com/t/request-for-feedback-optional-object-type-attributes-with-defaults-in-v1-3-alpha/40550 "Optional object type attributes with defaults in v1.3 alpha"

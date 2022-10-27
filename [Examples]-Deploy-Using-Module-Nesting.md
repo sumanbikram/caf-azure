@@ -70,7 +70,7 @@ To make the code easier to maintain when extending your configuration, we recomm
 - [terraform.tf](#terraformtf)
 - [variables.tf](#variablestf)
 - [main.tf](#maintf)
-- [lib/archetype_definition_customer_online.json](#libarchetype_definition_customer_onlinejson)
+- [lib/archetype_definition_customer_online.json](#libarchetypedefinitioncustomeronlinejson)
 
 ### `terraform.tf`
 
@@ -84,7 +84,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 3.18.0"
+      version = ">= 3.0.2"
     }
   }
 }

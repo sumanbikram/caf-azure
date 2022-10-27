@@ -29,4 +29,6 @@ To identify the Connectivity Subscription by ID, set the `subscription_id_connec
 [//]: # "INSERT LINK LABELS BELOW"
 [//]: # "************************"
 
+[this_page]: # "Link for the current page."
+
 [wiki_provider_configuration]: %5BUser-Guide%5D-Provider-Configuration "Wiki - Provider Configuration"

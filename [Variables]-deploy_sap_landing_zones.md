@@ -24,3 +24,5 @@ Set the value to true or false.
 [//]: # "************************"
 [//]: # "INSERT LINK LABELS BELOW"
 [//]: # "************************"
+
+[this_page]: # "Link for the current page."

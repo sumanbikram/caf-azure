@@ -28,3 +28,5 @@ To set a custom Name (ID) value for the Enterprise-scale "root" Management Group
 [//]: # "************************"
 [//]: # "INSERT LINK LABELS BELOW"
 [//]: # "************************"
+
+[this_page]: # "Link for the current page."

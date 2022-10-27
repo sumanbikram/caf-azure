@@ -44,3 +44,5 @@ Change the delay period of the specified resource type.
 [//]: # "************************"
 [//]: # "INSERT LINK LABELS BELOW"
 [//]: # "************************"
+
+[this_page]: # "Link for the current page."
