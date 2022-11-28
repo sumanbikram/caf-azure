@@ -55,7 +55,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 3.0.2"
+      version = ">= 3.19.0"
     }
   }
 }
@@ -131,7 +131,7 @@ data "azurerm_client_config" "core" {}
 
 module "enterprise_scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
-  version = "2.4.1"
+  version = "3.0.0"
 
   providers = {
     azurerm              = azurerm
@@ -164,7 +164,6 @@ locals {
         enabled = true
         config = {
           retention_in_days                                 = var.log_retention_in_days
-          enable_monitoring_for_arc                         = true
           enable_monitoring_for_vm                          = true
           enable_monitoring_for_vmss                        = true
           enable_solution_for_agent_health_assessment       = true
@@ -219,10 +218,8 @@ Check the following Policy Assignments to see how these have been configured wit
 
 - Scope = `root`
   - `Deploy-MDFC-Config`
-  - `Deploy-LX-Arc-Monitoring`
   - `Deploy-VM-Monitoring`
   - `Deploy-VMSS-Monitoring`
-  - `Deploy-WS-Arc-Monitoring`
   - `Deploy-AzActivity-Log`
   - `Deploy-Resource-Diag`
 - Scope = `management`
@@ -291,8 +288,6 @@ Looking for further inspiration? Why not try some of our other [examples][wiki_e
 [wiki_examples]:                     Examples "Wiki - Examples"
 
 [configure_management_resources]: %5BVariables%5D-configure_management_resources "Instructions for how to use the configure_management_resources variable."
-[deploy_management_resources]:    %5BVariables%5D-deploy_management_resources "Instructions for how to use the deploy_management_resources variable."
-[subscription_id_management]:     %5BVariables%5D-subscription_id_management "Instructions for how to use the subscription_id_management variable."
 [default_location]:               %5BVariables%5D-default_location "Instructions for how to use the default_location variable."
 [archetype_exclusions]:           %5BExamples%5D-Expand-Built-in-Archetype-Definitions#to-enable-the-exclusion-function "Wiki - Expand Built-in Archetype Definitions # To enable the exclusion function"
 [custom_archetypes]:              %5BUser-Guide%5D-Archetype-Definitions "[User Guide] Archetype Definitions"
