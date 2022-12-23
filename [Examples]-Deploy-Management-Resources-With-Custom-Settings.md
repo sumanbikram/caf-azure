@@ -15,6 +15,7 @@ In this example, we take the base [Deploy Management resources][wiki_deploy_mana
   - Disable Azure Defender for Azure Kubernetes Service (AKS)
   - Set a different location for Management resources (controlled through an input variable on the root module)
   - Add custom resource tags for Management resources (controlled through an input variable on the root module)
+  - Disable deployment of specified monitoring solutions in Azure Monitor (`ServiceMap`, `SQLAssessment`, `SQLAdvancedThreatProtection`, `SQLVulnerabilityAssessment`)
 
 The module allows for further customization of the Management resources through the `advanced` setting, however this is out-of-scope for this example.
 
@@ -28,7 +29,7 @@ Unfortunately this is a product limitation, but should have minimal impact due t
 
 If location is not specified, the resources will default to the same location set by [`default_location`][default_location] input variable.
 
-> IMPORTANT: Ensure the module version is set to the latest, and don't forget to run `terraform init` if upgrading to a later version of the module.
+> **IMPORTANT:** Ensure the module version is set to the latest, and don't forget to run `terraform init` if upgrading to a later version of the module.
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Azure/terraform-azurerm-caf-enterprise-scale?style=flat&logo=github)
 
@@ -41,7 +42,7 @@ To make the code easier to maintain when extending your configuration, we recomm
 - [main.tf](#maintf)
 - [settings.management.tf](#settingsmanagementtf)
 
-> TIP: The exact number of resources created depends on the module configuration, but you can expect upwards of 190 resources to be created by the module for this example.
+> **TIP:** The exact number of resources created depends on the module configuration, but you can expect upwards of 190 resources to be created by the module for this example.
 
 ### `terraform.tf`
 
@@ -131,7 +132,7 @@ data "azurerm_client_config" "core" {}
 
 module "enterprise_scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
-  version = "3.0.0"
+  version = "3.1.0"
 
   providers = {
     azurerm              = azurerm
@@ -168,12 +169,11 @@ locals {
           enable_monitoring_for_vmss                        = true
           enable_solution_for_agent_health_assessment       = true
           enable_solution_for_anti_malware                  = true
-          enable_solution_for_azure_activity                = true
           enable_solution_for_change_tracking               = true
-          enable_solution_for_service_map                   = true
-          enable_solution_for_sql_assessment                = true
-          enable_solution_for_sql_vulnerability_assessment  = true
-          enable_solution_for_sql_advanced_threat_detection = true
+          enable_solution_for_service_map                   = false
+          enable_solution_for_sql_assessment                = false
+          enable_solution_for_sql_vulnerability_assessment  = false
+          enable_solution_for_sql_advanced_threat_detection = false
           enable_solution_for_updates                       = true
           enable_solution_for_vm_insights                   = true
           enable_sentinel                                   = true

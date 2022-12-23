@@ -49,8 +49,9 @@ For each configuration object added to the `configure_connectivity_resources.set
         }
       }
     }
-    spoke_virtual_network_resource_ids = []
-    enable_virtual_hub_connections     = false
+    spoke_virtual_network_resource_ids        = []
+    secure_spoke_virtual_network_resource_ids = []
+    enable_virtual_hub_connections            = false
   }
 }
 ```
@@ -90,16 +91,16 @@ object({
           object({
             asn         = number
             peer_weight = number
-            instance_0_bgp_peering_address = list(
+            instance_0_bgp_peering_address = optional(list(
               object({
                 custom_ips = list(string)
               })
-            )
-            instance_1_bgp_peering_address = list(
+            ), [])
+            instance_1_bgp_peering_address = optional(list(
               object({
                 custom_ips = list(string)
               })
-            )
+            ), [])
           })
         ), [])
         routing_preference = optional(string, "Microsoft Network")
@@ -111,10 +112,10 @@ object({
       config = optional(object({
         enable_dns_proxy              = optional(bool, true)
         dns_servers                   = optional(list(string), [])
-        sku_tier                      = optional(string, "")
+        sku_tier                      = optional(string, "Standard")
         base_policy_id                = optional(string, "")
         private_ip_ranges             = optional(list(string), [])
-        threat_intelligence_mode      = optional(string, "")
+        threat_intelligence_mode      = optional(string, "Alert")
         threat_intelligence_allowlist = optional(list(string), [])
         availability_zones = optional(object({
           zone_1 = optional(bool, true)
@@ -123,8 +124,9 @@ object({
         }), {})
       }), {})
     }), {})
-    spoke_virtual_network_resource_ids = optional(list(string), [])
-    enable_virtual_hub_connections     = optional(bool, false)
+    spoke_virtual_network_resource_ids        = optional(list(string), [])
+    secure_spoke_virtual_network_resource_ids = optional(list(string), [])
+    enable_virtual_hub_connections            = optional(bool, false)
   })
 })
 ```
@@ -319,7 +321,17 @@ availability_zones = {
 
 #### `config.spoke_virtual_network_resource_ids`
 
+List of Azure Resource IDs used to identify spoke virtual networks associated with the hub network.
+
+Virtual networks added to this list will be configured with [`internet_security_enabled = false`](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_hub_connection#internet_security_enabled), allowing unsecured access to the Internet.
+
+#### `config.secure_spoke_virtual_network_resource_ids`
+
 List of Azure Resource IDs used to identify spoke Virtual Networks associated with the hub network.
+
+Virtual networks added to this list will be configured with [`internet_security_enabled = true`](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_hub_connection#internet_security_enabled), ensuring access to the Internet is secured by Azure Firewall in the associated secured virtual hub.
+
+> **NOTE:** To avoid conflicting route configurations, ensure virtual networks are only added to this list once per virtual hub.
 
 #### `config.enable_virtual_hub_connections`
 

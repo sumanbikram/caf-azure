@@ -103,8 +103,9 @@ If specified, will customize the "connectivity" landing zone settings and resour
               }
             }
           }
-          spoke_virtual_network_resource_ids = []
-          enable_virtual_hub_connections     = false
+          spoke_virtual_network_resource_ids        = []
+          secure_spoke_virtual_network_resource_ids = []
+          enable_virtual_hub_connections            = false
         }
       },
     ]
@@ -156,6 +157,7 @@ If specified, will customize the "connectivity" landing zone settings and resour
           azure_key_vault_managed_hsm          = true
           azure_kubernetes_service_management  = true
           azure_machine_learning_workspace     = true
+          azure_managed_disks                  = true
           azure_media_services                 = true
           azure_migrate                        = true
           azure_monitor                        = true
@@ -186,6 +188,7 @@ If specified, will customize the "connectivity" landing zone settings and resour
         private_dns_zones                                      = []
         enable_private_dns_zone_virtual_network_link_on_hubs   = true
         enable_private_dns_zone_virtual_network_link_on_spokes = true
+        virtual_network_resource_ids_to_link                   = []
       }
     }
   }
@@ -235,9 +238,9 @@ object({
                 vpn_client_configuration = optional(list(
                   object({
                     address_space = list(string)
-                    aad_tenant    = optional(string, "")
-                    aad_audience  = optional(string, "")
-                    aad_issuer    = optional(string, "")
+                    aad_tenant    = optional(string, null)
+                    aad_audience  = optional(string, null)
+                    aad_issuer    = optional(string, null)
                     root_certificate = optional(list(
                       object({
                         name             = string
@@ -250,27 +253,27 @@ object({
                         public_cert_data = string
                       })
                     ), [])
-                    radius_server_address = optional(string, "")
-                    radius_server_secret  = optional(string, "")
+                    radius_server_address = optional(string, null)
+                    radius_server_secret  = optional(string, null)
                     vpn_client_protocols  = optional(list(string), [])
                     vpn_auth_types        = optional(list(string), [])
                   })
                 ), [])
                 bgp_settings = optional(list(
                   object({
-                    asn         = number
-                    peer_weight = number
-                    peering_addresses = list(
+                    asn         = optional(number, null)
+                    peer_weight = optional(number, null)
+                    peering_addresses = optional(list(
                       object({
-                        ip_configuration_name = string
-                        apipa_addresses       = list(string)
+                        ip_configuration_name = optional(string, null)
+                        apipa_addresses       = optional(list(string), [])
                       })
-                    )
+                    ), [])
                   })
                 ), [])
                 custom_route = optional(list(
                   object({
-                    address_prefixes = list(string)
+                    address_prefixes = optional(list(string), [])
                   })
                 ), [])
               }), {})
@@ -285,7 +288,7 @@ object({
               sku_tier                      = optional(string, "Standard")
               base_policy_id                = optional(string, "")
               private_ip_ranges             = optional(list(string), [])
-              threat_intelligence_mode      = optional(string, "")
+              threat_intelligence_mode      = optional(string, "Alert")
               threat_intelligence_allowlist = optional(list(string), [])
               availability_zones = optional(object({
                 zone_1 = optional(bool, true)
@@ -326,16 +329,16 @@ object({
                 object({
                   asn         = number
                   peer_weight = number
-                  instance_0_bgp_peering_address = list(
+                  instance_0_bgp_peering_address = optional(list(
                     object({
                       custom_ips = list(string)
                     })
-                  )
-                  instance_1_bgp_peering_address = list(
+                  ), [])
+                  instance_1_bgp_peering_address = optional(list(
                     object({
                       custom_ips = list(string)
                     })
-                  )
+                  ), [])
                 })
               ), [])
               routing_preference = optional(string, "Microsoft Network")
@@ -347,10 +350,10 @@ object({
             config = optional(object({
               enable_dns_proxy              = optional(bool, true)
               dns_servers                   = optional(list(string), [])
-              sku_tier                      = optional(string, "")
+              sku_tier                      = optional(string, "Standard")
               base_policy_id                = optional(string, "")
               private_ip_ranges             = optional(list(string), [])
-              threat_intelligence_mode      = optional(string, "")
+              threat_intelligence_mode      = optional(string, "Alert")
               threat_intelligence_allowlist = optional(list(string), [])
               availability_zones = optional(object({
                 zone_1 = optional(bool, true)
@@ -359,8 +362,9 @@ object({
               }), {})
             }), {})
           }), {})
-          spoke_virtual_network_resource_ids = optional(list(string), [])
-          enable_virtual_hub_connections     = optional(bool, false)
+          spoke_virtual_network_resource_ids        = optional(list(string), [])
+          secure_spoke_virtual_network_resource_ids = optional(list(string), [])
+          enable_virtual_hub_connections            = optional(bool, false)
         })
       })
     ), [])
@@ -412,6 +416,7 @@ object({
           azure_key_vault_managed_hsm          = optional(bool, true)
           azure_kubernetes_service_management  = optional(bool, true)
           azure_machine_learning_workspace     = optional(bool, true)
+          azure_managed_disks                  = optional(bool, true)
           azure_media_services                 = optional(bool, true)
           azure_migrate                        = optional(bool, true)
           azure_monitor                        = optional(bool, true)
@@ -442,6 +447,7 @@ object({
         private_dns_zones                                      = optional(list(string), [])
         enable_private_dns_zone_virtual_network_link_on_hubs   = optional(bool, true)
         enable_private_dns_zone_virtual_network_link_on_spokes = optional(bool, true)
+        virtual_network_resource_ids_to_link                   = optional(list(string), [])
       }), {})
     }), {})
   }), {})
